@@ -1,0 +1,70 @@
+.da-thumbs {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	position: relative;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.da-thumbs li {
+	width: 480px;
+}
+
+.da-thumbs li a,
+.da-thumbs li a img {
+	display: block;
+	position: relative;
+}
+
+.da-thumbs li a img {
+	width: 100%;
+}
+
+.da-thumbs li a {
+	height: 318px;
+	color: #fff;
+	overflow: hidden;
+}
+
+.da-thumbs li a div {
+	position: absolute;
+	top: 0px;
+	left: -100%;
+	width: 100%;
+	height: 100%;
+	background: rgb(48,168,150);
+	background: rgba(48,168,150,.7);
+	text-align: center;
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+.da-thumbs li a div span {
+	display: block;
+	text-transform: uppercase;
+}
+
+.da-thumbs li a div span:first-of-type {
+	font-size: 30px;
+	font-weight: 700;
+	margin: 88px 0 25px;
+}
+
+.da-thumbs li a div span:last-of-type {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 18px;
+	font-weight: 600;
+}
+
+.da-thumbs li a div i {
+	font-size: 40px;
+	margin-top: 20px;
+}
+
+.da-thumbs li a:hover div{
+	left: 0px;
+}
