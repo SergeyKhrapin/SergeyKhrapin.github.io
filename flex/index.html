@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Flex</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+	<div class="flex_container">
+		
+		<!-- <img src="images/cat2.jpg" alt="">
+		<img src="images/cat3.jpg" alt="">
+		<img src="images/cat4.jpg" alt="">
+		<img src="images/cat5.jpg" alt="">
+		<img src="images/cat6.jpg" alt=""> -->
+
+		<!-- <div class="flex_element element1"></div>
+		<div class="flex_element element2"></div>
+		<div class="flex_element element3"></div>
+		<div class="flex_element element4"></div>
+		<div class="flex_element element5"></div>
+		<div class="flex_element element6"></div> -->
+
+	</div>
+
+
+
+
+
+	<!-- ШПАРГАЛКА -->
+
+	<hr>
+
+	<div class="flex_model">
+		<div class="container_properties">
+			<h2>свойства <b>флекс-контейнера</b></h2>
+
+			<p><span><span>display:</span> flex;</span>flex | inline-flex</p>
+
+			<h3><a href="https://www.w3.org/TR/css-flexbox/#propdef-flex-direction">flex-direction</a> - направление <b>главной</b> оси</h3>
+			<p><span><span>flex-direction:</span> row;</span>слева направо (по умолчанию)</p>
+			<p><span><span>flex-direction:</span> row-reverse;</span>справа налево</p>
+			<p><span><span>flex-direction:</span> column;</span>сверху вниз </p>
+			<p><span><span>flex-direction:</span> column-reverse;</span>снизу вверх</p>
+
+			<h3><a href="https://www.w3.org/TR/css-flexbox/#propdef-justify-content">justify-content</a> - распределение флекс-элементов вдоль <b>главной</b> оси</h3>
+			<p><span><span>justify-content:</span> flex-start;</span>в начале оси (по умолчанию)</p>
+			<p><span><span>justify-content:</span> flex-end;</span>в конце оси</p>
+			<p><span><span>justify-content:</span> center;</span>по центру</p>
+			<p><span><span>justify-content:</span> space-around;</span>распределяются равномерно вдоль всей оси</p>
+			<p><span><span>justify-content:</span> space-between;</span>равномерно (крайние элементы прибиваются к краям)</p>
+
+			<h3><a href="https://www.w3.org/TR/css-flexbox/#propdef-align-items">align-items</a> - распределение флекс-элементов <b>внутри строки</b> вдоль <b>поперечной</b> оси</h3>
+			<p><span><span>align-items:</span> stretch;</span>растягиваются по всей поперечной оси (по умолчанию)</p>
+			<p><span><span>align-items:</span> flex-start;</span>в начале оси</p>
+			<p><span><span>align-items:</span> flex-end;</span>в конце оси</p>
+			<p><span><span>align-items:</span> center;</span>по центру оси</p>
+			<p><span><span>align-items:</span> baseline;</span>по базовой линии</p>
+
+			<h3><a href="https://www.w3.org/TR/css-flexbox/#propdef-flex-wrap">flex-wrap</a> - перенос флекс-элементов на новую строку,<br>а также направление поперечной оси!</h3>
+			<p><span><span>flex-wrap:</span> nowrap;</span>не переносятся (по умолчанию)</p>
+			<p><span><span>flex-wrap:</span> wrap;</span>переносятся (когда не помещаются на одной строке)</p>
+			<p><span><span>flex-wrap:</span> wrap-reverse;</span>переносятся, а также меняется направление</p>
+			<p><span></span>поперечной оси на противоположное!</p>
+
+			<h3><a href="https://www.w3.org/TR/css-flexbox/#propdef-align-content">align-content</a> - распределение <b>строк</b> вдоль <b>поперечной</b> оси</h3>
+			<p><span><span>align-content:</span> stretch;</span>растягиваются по поперечной оси (по умолчанию)</p>
+			<p><span><span>align-content:</span> flex-start;</span>в начале оси</p>
+			<p><span><span>align-content:</span> flex-end;</span>в конце оси</p>
+			<p><span><span>align-content:</span> center;</span>по центру</p>
+			<p><span><span>align-content:</span> space-around;</span>распределяются равномерно вдоль всей оси</p>
+			<p><span><span>align-content:</span> space-between;</span>равномерно (крайние элементы прибиваются к краям)</p>
+
+			<h3><a href="https://www.w3.org/TR/css-flexbox/#propdef-flex-flow">flex-flow</a> - сокращенная запись flex-direction + flex-wrap</h3>
+			<p><span><span>flex-flow:</span> row nowrap;</span></p>
+		</div>
+
+		<div class="elements_properties">
+			<h2>свойства <b>флекс-элементов</b></h2>
+				
+			<h3><a href="https://www.w3.org/TR/css-flexbox/#propdef-flex-grow">flex-grow</a> - сколько свободного места займет элемент по сравнению с другими элементами (при наличии свободного пространства)<br><q>определяет насколько сильно будет увеличиваться флекс-элемент по отношению к другим флекс-элементам при распределении положительного свободного пространства</q></h3>
+			<p><span><span>flex-grow:</span> 0;</span>по умолчанию - 0</p>
+			
+			<h3><a href="https://www.w3.org/TR/css-flexbox/#propdef-flex-shrink">flex-shrink</a> - определяет на сколько сузится элемент по сравнению с другими элементами, чтобы все поместились в контейнере<br><q>определяет насколько сильно будет сжиматься флекс-элемент по отношению к другим флекс-элементам при распределении отрицательного свободного пространства</q></h3>
+			<p><span><span>flex-shrink:</span> 1;</span>по умолчанию - 1</p>
+
+			<h3><a href="https://www.w3.org/TR/css-flexbox/#propdef-flex-basis">flex-basis</a> - главный размер элемента (высота или ширина), т.е. размер вдоль главной оси</h3>
+			<p><span><span>flex-basis:</span> 100px;</span>по умолчанию - auto</p>
+
+			<h3><a href="https://www.w3.org/TR/css-flexbox/#flex-property">flex</a> - сокращенная запись flex-grow + flex-shrink + flex-basis</h3>
+			<p><span><span>flex:</span> 0 1 auto;</span></p>
+
+			<h3><a href="https://www.w3.org/TR/css-flexbox/#propdef-order">order</a> - порядок следования флекс-элементов</h3>
+			<p><span><span>order:</span> 0;</span>по умолчанию - 0</p>
+
+			<h3><a href="https://www.w3.org/TR/css-flexbox/#propdef-align-self">align-self</a> - распределение <b>только этого элемента</b> внутри строки вдоль поперечной оси</h3>
+			<p><span><span>align-self:</span> auto;</span>те же значения, что и у align-items</p>
+
+		</div>
+
+	</div>
+
+	<hr>
+
+	<h4>Расчет flex-shrink и flex-grow</h4>
+
+	<p>Свойство flex-shrink работает не совсем так же, как flex-grow... Если у последнего всё просто - положительное свободное пространство "раздаем" флекс-элементам в нужных пропорциях (в зависимости от значения flex-grow), то у flex-shrink это не работает (точнее сказать работает , но только при одинаковых flex-basis у элементов). То есть в случае flex-shrink, отрицательное свободное пространство "раздается" (то есть отнимается) не только в зависимости от значения flex-shrink, но и в зависимости от flex-basis элементов.</p>
+
+	<p>Так, размер элемента будет равен:</p>
+	<pre><code>
+size = flex-basis + nfs * ( flex-basis * flex-shrink / ∑(flex-basis * flex-shrink) ),
+	   где nfs - negative free space (отрицательное свободное пространство)
+	       nfs = width_container - ∑flex-basis (значение получится отрицательным)
+	</code></pre>
+
+	<p>А для flex-grow формула будет почти идентична (только без учета flex-basis во второй части):</p>
+	<pre><code>
+size = flex-basis + pfs * ( flex-grow / ∑flex-grow ),
+	   где pfs - positive free space (положительное свободное пространство)
+	       pfs = width_container - ∑flex-basis
+	</code></pre>
+
+</body>
+</html>

@@ -1,0 +1,135 @@
+.flex_container {
+	display: flex;
+	display: -webkit-flex;
+	flex-flow: row nowrap;
+	max-width: 1000px;
+	margin: 20px;
+	background: #cfc9c9;
+}
+
+.flex_element {
+
+}
+
+img {
+
+}
+
+.element1 {
+	background: #16B809;
+}
+
+.element2 {
+	background: #3631F5;
+}
+
+.element3 {
+	background: #E023BA;
+}
+
+.element4 {
+	background: #E7E918;
+}
+
+.element5 {
+	background: #E00B0B;
+}
+
+.element6 {
+	background: #F47F0D;
+}
+
+
+
+
+
+
+/*=====================================================
+	стили ШПАРГАЛКИ
+======================================================*/
+
+.flex_model {
+	display: flex;
+	margin: 0 10px 50px;
+}
+
+.container_properties {
+	width: 53%;
+	padding-right: 20px;
+}
+
+.elements_properties {
+	width: 47%;
+}
+
+.flex_model h2 {
+	display: inline-block;
+	font-weight: normal;
+	background: #8dd3ca;
+	padding: 10px;
+}
+
+.flex_model h3 {
+	font-size: 17px;
+	font-weight: normal;
+	margin: 26px 0 8px;
+}
+
+.flex_model h3 a {
+	color: #0148fd;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.flex_model h3 a:hover {
+	text-decoration: none;
+}
+
+.flex_model p  {
+	margin: 0;
+}
+
+.flex_model p > span {
+	display: inline-block;
+	width: 220px;
+	color: #0fc2e9;
+	font-weight: bold;
+}
+
+.flex_model p span span {
+	color: #27809a;
+}
+
+.elements_properties h3 {
+	margin: 36px 0 8px;
+}
+
+.elements_properties p span {
+	width: 140px;
+}
+
+q {
+	font-size: 15px;
+	font-style: italic;
+}
+
+@media (max-width: 1000px) {
+	.flex_model {
+		flex-direction: column;
+	}
+
+	.elements_properties,
+	.container_properties {
+		width: 100%;
+	}
+
+	.elements_properties {
+		margin-top: 50px;
+	}
+}
+
+@media (max-width: 640px) {
+	pre {
+		font-size: 1.85vw;
+	}
+}
