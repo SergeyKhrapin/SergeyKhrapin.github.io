@@ -27,7 +27,6 @@ $width_inside: 1170px;
 %button {
 	font-family: $secondary_font;
 	display: inline-block;
-
 	width: 145px;
 	height: 46px;
 	line-height: 46px;
@@ -1077,6 +1076,14 @@ $body_width: $body_width - 50px;
 				@media (min-width: 1050px) {
 					transition-delay: .4s; // предотвращаю мгновенное появление всплывающего блока при, например, случайном наведении мыши (для десктопов и ноутбуков)
 				}
+				p {
+					opacity: 1;
+					transition-duration: .4s;
+					transition-delay: .5s;
+					@media (min-width: 1050px) {
+						transition-delay: .9s;
+					}
+				}
 			}
 		}
 	}
@@ -1118,6 +1125,10 @@ $body_width: $body_width - 50px;
 		border-top: 10px solid $heading_color;
 		border-left: 10px solid transparent;
 		border-right: 10px solid transparent;
+	}
+	p {
+		margin: 0;
+		opacity: 0;
 	}
 }
 /*====================================

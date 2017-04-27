@@ -1635,6 +1635,18 @@
   }
 }
 
+.integrations_item img:hover + .integrations_item_title p {
+  opacity: 1;
+  transition-duration: .4s;
+  transition-delay: .5s;
+}
+
+@media (min-width: 1050px) {
+  .integrations_item img:hover + .integrations_item_title p {
+    transition-delay: .9s;
+  }
+}
+
 @media (max-width: 1140px) {
   .integrations_item {
     margin: 10px 3%;
@@ -1682,6 +1694,11 @@
   border-top: 10px solid #6a6a6a;
   border-left: 10px solid transparent;
   border-right: 10px solid transparent;
+}
+
+.integrations_item_title p {
+  margin: 0;
+  opacity: 0;
 }
 
 /*====================================
