@@ -1433,6 +1433,8 @@ $body_width: $body_width - 50px;
 			padding: 0 0 16px;
 			border: 0;
 			border-bottom: 1px solid #e5e5e5;
+			font-family: $secondary_font;
+			font-size: 16px;
 			outline: none;
 			transition: .6s;
 			&:focus {
