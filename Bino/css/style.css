@@ -1,4 +1,4 @@
-.header_inside a, .history_text a, .study_flip span, .pricing_bottom_block a, .contact_form [type='submit'], .free_trial a {
+.header_inside a, .history_text a, .study_flip span, .study_flip .team_bottom_block .wrapper_inside div h3, .team_bottom_block .wrapper_inside div .study_flip h3, .pricing_bottom_block a, .contact_form [type='submit'], .free_trial a {
   font-family: "Open Sans", sans-serif;
   display: inline-block;
   width: 145px;
@@ -15,22 +15,22 @@
   transition: .2s;
 }
 
-.header_inside a:hover, .history_text a:hover, .study_flip span:hover, .pricing_bottom_block a:hover, .contact_form [type='submit']:hover, .free_trial a:hover {
+.header_inside a:hover, .history_text a:hover, .study_flip span:hover, .study_flip .team_bottom_block .wrapper_inside div h3:hover, .team_bottom_block .wrapper_inside div .study_flip h3:hover, .pricing_bottom_block a:hover, .contact_form [type='submit']:hover, .free_trial a:hover {
   box-shadow: 2px 2px 2px #999;
 }
 
-.portfolio, .study, .pricing, .blog, .contacts {
+.portfolio, .study, .pricing, .team, .integrations, .blog, .contacts {
   border-top: 1px solid transparent;
 }
 
-.portfolio > h2, .study > h2, .pricing > h2, .blog > h2, .contacts > h2 {
+.portfolio > h2, .study > h2, .pricing > h2, .team > h2, .integrations > h2, .blog > h2, .contacts > h2 {
   margin: 7% 0 24px;
   font-size: 36px;
   color: #6a6a6a;
   text-transform: uppercase;
 }
 
-.portfolio > p, .study > p, .pricing > p, .blog > p, .contacts > p {
+.portfolio > p, .study > p, .pricing > p, .team > p, .integrations > p, .blog > p, .contacts > p {
   margin: 0;
   padding: 0 20px;
   font-family: "Open Sans", sans-serif;
@@ -38,7 +38,7 @@
   color: #999;
 }
 
-.portfolio .divider, .study .divider, .pricing .divider, .blog .divider, .contacts .divider {
+.portfolio .divider, .study .divider, .pricing .divider, .team .divider, .integrations .divider, .blog .divider, .contacts .divider {
   margin: 27px 0 3.6%;
 }
 
@@ -658,7 +658,7 @@
   margin-top: 64px;
 }
 
-.services_text_item span {
+.services_text_item span, .services_text_item .team_bottom_block .wrapper_inside div h3, .team_bottom_block .wrapper_inside div .services_text_item h3 {
   display: inline-block;
   font-family: "Open Sans", sans-serif;
   font-weight: 600;
@@ -669,7 +669,7 @@
   outline: none;
 }
 
-.services_text_item span:hover {
+.services_text_item span:hover, .services_text_item .team_bottom_block .wrapper_inside div h3:hover, .team_bottom_block .wrapper_inside div .services_text_item h3:hover {
   color: #e74c3c;
 }
 
@@ -839,6 +839,8 @@
   -webkit-transform: scale(0);
   -ms-transform: scale(0);
   transform: scale(0);
+  -webkit-animation: none;
+  animation: none;
 }
 
 .portfolio_images a:hover::before {
@@ -1138,7 +1140,7 @@
   line-height: 1.714;
 }
 
-.study_flip span {
+.study_flip span, .study_flip .team_bottom_block .wrapper_inside div h3, .team_bottom_block .wrapper_inside div .study_flip h3 {
   background: #e74c3c;
   outline: none;
 }
@@ -1166,7 +1168,7 @@
   text-align: justify;
 }
 
-.study_text_back span {
+.study_text_back span, .study_text_back .team_bottom_block .wrapper_inside div h3, .team_bottom_block .wrapper_inside div .study_text_back h3 {
   margin-top: 30px;
 }
 
@@ -1301,7 +1303,7 @@
   font-size: 34px;
 }
 
-.stat_item span {
+.stat_item span, .stat_item .team_bottom_block .wrapper_inside div h3, .team_bottom_block .wrapper_inside div .stat_item h3 {
   font-size: 30px;
   font-weight: 700;
 }
@@ -1363,7 +1365,7 @@
   background: #e74c3c;
 }
 
-.pricing_item:hover span {
+.pricing_item:hover span, .pricing_item:hover .team_bottom_block .wrapper_inside div h3, .team_bottom_block .wrapper_inside div .pricing_item:hover h3 {
   color: #e74c3c;
 }
 
@@ -1406,7 +1408,7 @@
   color: #999;
 }
 
-.pricing_top_block .pricing_circle span {
+.pricing_top_block .pricing_circle span, .pricing_top_block .pricing_circle .team_bottom_block .wrapper_inside div h3, .team_bottom_block .wrapper_inside div .pricing_top_block .pricing_circle h3 {
   font-size: 40px;
   font-weight: 700;
   transition: .2s;
@@ -1438,6 +1440,252 @@
 
 /*====================================
 	pricing (end)
+======================================*/
+/*====================================
+	team (start)
+======================================*/
+.team {
+  position: relative;
+  height: 744px;
+  background: url(../img/team_bg1.jpg) 50%/cover no-repeat;
+}
+
+.team > h2 {
+  color: #fff;
+}
+
+.team > p {
+  color: #f4f5f9;
+}
+
+@media (max-width: 1350px) {
+  .team {
+    height: 600px;
+    max-height: 120vh;
+  }
+  .team .wrapper_inside {
+    -webkit-justify-content: space-around;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+  }
+}
+
+.team_bottom_block {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 40%;
+  border-top: 3px solid #e74c3c;
+  background: url(../img/team_bg2.png);
+}
+
+.team_bottom_block .wrapper_inside {
+  top: -35px;
+}
+
+@media (max-width: 450px) {
+  .team_bottom_block .wrapper_inside {
+    top: -28px;
+  }
+}
+
+.team_bottom_block .wrapper_inside div {
+  position: relative;
+}
+
+.team_bottom_block .wrapper_inside div:hover {
+  z-index: 100;
+}
+
+.team_bottom_block .wrapper_inside div img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 3px solid #e74c3c;
+  object-fit: cover;
+  cursor: pointer;
+  transition: .5s;
+}
+
+@media (max-width: 450px) {
+  .team_bottom_block .wrapper_inside div img {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+.team_bottom_block .wrapper_inside div img:hover {
+  -webkit-transform: scale(1.4);
+  -ms-transform: scale(1.4);
+  transform: scale(1.4);
+}
+
+.team_bottom_block .wrapper_inside div img:hover ~ span, .team_bottom_block .wrapper_inside div img:hover ~ h3 {
+  top: 155px;
+  left: -100px;
+  right: -100px;
+  opacity: 1;
+  visibility: visible;
+  font-size: 14px;
+}
+
+.team_bottom_block .wrapper_inside div img:hover ~ h3 {
+  top: 120px;
+  left: -100px;
+  right: -100px;
+  opacity: 1;
+  visibility: visible;
+  font-size: 24px;
+}
+
+.team_bottom_block .wrapper_inside div span, .team_bottom_block .wrapper_inside div h3 {
+  position: absolute;
+  top: 60px;
+  left: 0;
+  right: 0;
+  font-size: 0;
+  color: #fff;
+  text-transform: capitalize;
+  opacity: 0;
+  visibility: hidden;
+  white-space: nowrap;
+  transition: .5s;
+}
+
+.team_bottom_block .wrapper_inside div h3 {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  color: #e74c3c;
+  margin: 0 auto;
+}
+
+/*====================================
+	team (end)
+======================================*/
+/*====================================
+	integrations (start)
+======================================*/
+.integrations {
+  padding-bottom: 7%;
+  background: #f4f5f9;
+}
+
+.integrations .wrapper_inside {
+  -webkit-align-content: space-between;
+  -ms-flex-line-pack: justify;
+  align-content: space-between;
+  min-height: 230px;
+}
+
+@media (max-width: 1140px) {
+  .integrations .wrapper_inside {
+    -webkit-justify-content: space-around;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+  }
+}
+
+.integrations_item {
+  position: relative;
+  z-index: 0;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 210px;
+  height: 100px;
+  background: #fff;
+  box-shadow: 0px 1px 3px 0px rgba(31, 31, 31, 0.09);
+}
+
+.integrations_item img {
+  display: inline-block;
+  background: #fff;
+  width: 100%;
+  height: 100%;
+  padding: 10%;
+  z-index: 100;
+  box-sizing: border-box;
+  object-fit: contain;
+  cursor: pointer;
+  transition: .2s;
+}
+
+.integrations_item img:hover {
+  background: #e74c3c;
+  box-shadow: 2px 2px 2px #999;
+}
+
+.integrations_item img:hover + .integrations_item_title {
+  top: calc(-100% - 10px);
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  transition-duration: .6s;
+}
+
+@media (min-width: 1050px) {
+  .integrations_item img:hover + .integrations_item_title {
+    transition-delay: .4s;
+  }
+}
+
+@media (max-width: 1140px) {
+  .integrations_item {
+    margin: 10px 3%;
+  }
+  .integrations_item:last-child {
+    display: none;
+  }
+}
+
+@media (max-width: 810px) {
+  .integrations_item {
+    margin: 10px 4%;
+  }
+  .integrations_item:last-child {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.integrations_item_title {
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  width: 0;
+  height: 0;
+  margin: 0;
+  padding: 10px;
+  box-sizing: border-box;
+  border-radius: 3px;
+  background: #6a6a6a;
+  box-shadow: 0 0 10px #6a6a6a;
+  text-align: justify;
+  opacity: 0;
+  cursor: default;
+  transition-duration: .6s;
+  transition-delay: 0s;
+}
+
+.integrations_item_title::before {
+  content: '';
+  position: absolute;
+  left: 20px;
+  bottom: -10px;
+  border-top: 10px solid #6a6a6a;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+}
+
+/*====================================
+	integrations (end)
 ======================================*/
 /*====================================
 	blog (start)
@@ -1516,7 +1764,7 @@
   border-right: 26px solid #e74c3c;
 }
 
-.blog_text span {
+.blog_text span, .blog_text .team_bottom_block .wrapper_inside div h3, .team_bottom_block .wrapper_inside div .blog_text h3 {
   font-family: "Source Sans Pro", sans-serif;
   font-size: 14px;
 }
@@ -2144,7 +2392,7 @@ textarea:-moz-placeholder {
   font-size: 36px;
 }
 
-.free_trial h2 span {
+.free_trial h2 span, .free_trial h2 .team_bottom_block .wrapper_inside div h3, .team_bottom_block .wrapper_inside div .free_trial h2 h3 {
   font-weight: 400;
 }
 
@@ -2365,7 +2613,7 @@ footer .copyright {
   .services_text_item {
     width: 30%;
   }
-  .services_text_item span {
+  .services_text_item span, .services_text_item .team_bottom_block .wrapper_inside div h3, .team_bottom_block .wrapper_inside div .services_text_item h3 {
     margin-bottom: 15px;
   }
   .services_text_item p {
@@ -2525,10 +2773,10 @@ footer .copyright {
   .study_text hr {
     display: none;
   }
-  .study_text span {
+  .study_text span, .study_text .team_bottom_block .wrapper_inside div h3, .team_bottom_block .wrapper_inside div .study_text h3 {
     margin-bottom: 40px;
   }
-  .study_text_back span {
+  .study_text_back span, .study_text_back .team_bottom_block .wrapper_inside div h3, .team_bottom_block .wrapper_inside div .study_text_back h3 {
     margin-top: 20%;
   }
   .study_img {
