@@ -1166,7 +1166,7 @@ $body_width: $body_width - 50px;
 	&::before {
 		content: '';
 		position: absolute;
-		left: -26px;
+		left: -25px;
 		top: calc(50% - 30px);
 		border-top: 30px solid transparent;
 		border-bottom: 30px solid transparent;
@@ -1226,7 +1226,7 @@ $body_width: $body_width - 50px;
 		left: 0;
 		&::before {
 			left: auto;
-			right: -26px;
+			right: -25px;
 			transform: rotate(180deg);
 		}
 	}

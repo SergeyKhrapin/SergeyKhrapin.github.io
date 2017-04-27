@@ -1757,7 +1757,7 @@
 .blog_text::before {
   content: '';
   position: absolute;
-  left: -26px;
+  left: -25px;
   top: calc(50% - 30px);
   border-top: 30px solid transparent;
   border-bottom: 30px solid transparent;
@@ -1833,7 +1833,7 @@
 .blog_item:nth-of-type(4) .blog_text_3::before,
 .blog_item:nth-of-type(4) .blog_text_4::before {
   left: auto;
-  right: -26px;
+  right: -25px;
   -webkit-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   transform: rotate(180deg);
