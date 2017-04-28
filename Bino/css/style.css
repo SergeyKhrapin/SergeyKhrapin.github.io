@@ -1,3 +1,8 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:400,400i,700i|Open+Sans:300,400,600,600i,700,700i|Source+Sans+Pro:300,400,600,700");
+@import url("normalize.css");
+@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+@import url("wowslider.css");
+@import url("lightbox.css");
 .header_inside a, .history_text a, .study_flip span, .study_flip .team_bottom_block .wrapper_inside div h3, .team_bottom_block .wrapper_inside div .study_flip h3, .pricing_bottom_block a, .contact_form [type='submit'], .free_trial a {
   font-family: "Open Sans", sans-serif;
   display: inline-block;
@@ -2763,7 +2768,6 @@ footer .copyright {
   .history_text p {
     margin: 15px 0;
     text-align: justify;
-    -moz-text-align-last: center;
     text-align-last: center;
   }
   .history_text a {
