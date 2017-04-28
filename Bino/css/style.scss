@@ -1,5 +1,5 @@
-@import url('normalize.css');
 @import url('https://fonts.googleapis.com/css?family=Lato:400,400i,700i|Open+Sans:300,400,600,600i,700,700i|Source+Sans+Pro:300,400,600,700');
+@import url('normalize.css');
 @import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 @import url('wowslider.css');
 @import url('lightbox.css');
@@ -29,17 +29,21 @@ $width_inside: 1170px;
 
 // шаблонный селектор для всех кнопок (start)
 %button {
-	font-family: $secondary_font;
 	display: inline-block;
 	width: 145px;
 	height: 46px;
 	line-height: 46px;
-	font-size: 12px;
 	color: #fff;
 	border-radius: 2px;
 	box-shadow: 2px 2px 2px #d9d9d9;
-	text-transform: uppercase;
-	text-decoration: none;
+	font: {
+		family: $secondary_font;
+		size: 12px;
+	}
+	text: {
+		transform: uppercase;
+		decoration: none;
+	}
 	cursor: pointer;
 	outline: none;
 	transition: .2s;
@@ -62,8 +66,10 @@ $width_inside: 1170px;
 	> p {
 		margin: 0;
 		padding: 0 20px;
-		font-family: $secondary_font;
-		font-size: 14px;
+		font: {
+			family: $secondary_font;
+			size: 14px;
+		}
 		color: $text-color;
 	}
 	.divider {
@@ -104,8 +110,10 @@ $width_inside: 1170px;
 		position: absolute;
 		bottom: -2px;
 		z-index: 100;
-		border-bottom: 124px solid #fff;
-		border-left: 960px solid transparent;
+		border: {
+			bottom: 124px solid #fff;
+			left: 960px solid transparent;
+		}
 		right: 0;
 	}
 	&::before {
@@ -113,8 +121,10 @@ $width_inside: 1170px;
 		position: absolute;
 		bottom: -2px;
 		z-index: 100;
-		border-bottom: 124px solid #fff;
-		border-right: 960px solid transparent;
+		border: {
+			bottom: 124px solid #fff;
+			right: 960px solid transparent;
+		}
 		left: 0;
 	}
 	.fa-anchor {
@@ -161,8 +171,10 @@ $width_inside: 1170px;
 		margin: 0;
 		a {
 			padding: 18px 0;
-			text-decoration: none;
-			text-transform: uppercase;
+			text: {
+				decoration: none;
+				transform: uppercase;
+			}
 			color: $primary_color;
 			outline: none;
 			&:hover {
@@ -192,8 +204,10 @@ $width_inside: 1170px;
 	top: 32.32%;
 	h1 {
 		margin: 28px 0;
-		font-family: $secondary_font;
-		font-size: 72px;
+		font: {
+			family: $secondary_font;
+			size: 72px;
+		}
 		text-transform: uppercase;
 	}
 	h2 {
@@ -203,8 +217,10 @@ $width_inside: 1170px;
 	p {
 		width: 594px;
 		margin: 30px auto 65px;
-		font-family: $secondary_font;
-		font-size: 14px;
+		font: {
+			family: $secondary_font;
+			size: 14px;
+		}
 		color: $secondary_color;
 		line-height: 1.714;
 	}

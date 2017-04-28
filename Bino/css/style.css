@@ -4,15 +4,15 @@
 @import url("wowslider.css");
 @import url("lightbox.css");
 .header_inside a, .history_text a, .study_flip span, .study_flip .team_bottom_block .wrapper_inside div h3, .team_bottom_block .wrapper_inside div .study_flip h3, .pricing_bottom_block a, .contact_form [type='submit'], .free_trial a {
-  font-family: "Open Sans", sans-serif;
   display: inline-block;
   width: 145px;
   height: 46px;
   line-height: 46px;
-  font-size: 12px;
   color: #fff;
   border-radius: 2px;
   box-shadow: 2px 2px 2px #d9d9d9;
+  font-family: "Open Sans", sans-serif;
+  font-size: 12px;
   text-transform: uppercase;
   text-decoration: none;
   cursor: pointer;
