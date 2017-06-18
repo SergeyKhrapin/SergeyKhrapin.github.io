@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Organizer</title>
+
+	<!-- favicons -->
+	<link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+	<link rel="manifest" href="img/manifest.json">
+	<link rel="mask-icon" href="img/safari-pinned-tab.svg" color="#5bbad5">
+	<link rel="shortcut icon" href="img/favicon.ico">
+	<meta name="msapplication-config" content="img/browserconfig.xml">
+	<meta name="theme-color" content="#ffffff">
+	<!-- favicons -->
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+	<div class="organizer">
+		<form action='#' method='' class='form_create_task'>
+			<div class="complete_all_btn" title='complete all tasks'>&#65088;</div>
+			<input type="text" class="create_task" placeholder='What needs to be done?'>
+		</form>
+		<div class="tasks_block">
+
+		</div>
+		<div class="toolbar">
+			<span class="items_left"><span></span> items left</span>
+			<div class="sort_btns">
+				<span id='sort_all' class='sort_btns_click'>All</span>
+				<span id='sort_active'>Active</span>
+				<span id='sort_complete'>Completed</span>
+			</div>
+			<span class="clear_completed">Clear completed</span>
+		</div>
+	</div>
+
+	<script src='script.js'></script>
+
+</body>
+
+</html>

@@ -1,0 +1,177 @@
+body {
+	background: #f5f5f5;
+}
+
+.organizer {
+	width: 40%;
+	margin: 40px auto 0;
+	color: #4d4d4d;
+	box-shadow: 0 0 8px #4d4d4d;
+}
+
+.form_create_task {
+	position: relative;
+}
+
+/* стрелочка для завершения всех тасков */
+.complete_all_btn {
+	position: absolute;
+	top: 22px;
+    left: 17px;
+    font-size: 22px;
+    font-weight: bold;
+    opacity: .3;
+    cursor: default;
+    user-select: none;
+}
+
+.complete_all_btn:hover {
+	color: rgb(18, 217, 46);
+}
+
+/* меняю цвет кнопки (стрелочки) completeAllBtn при клике по ней (в скриптах) */
+.complete_all_btn_checked {
+	color: rgb(18, 217, 46);
+}
+
+/* поле создания тасков */
+.create_task {
+	width: 100%;
+	padding: 16px 16px 16px 60px;
+	font-size: 24px;
+	outline: 0;
+	border: 0;
+	border-bottom: 2px solid rgba(151, 151, 151, .3);
+	box-sizing: border-box;
+}
+
+.create_task::placeholder {
+	font-style: italic;
+	opacity: .3;
+}
+
+.tasks_block {
+	background: #fefefe;
+}
+
+.form_new_task {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	border-bottom: 1px solid rgba(151, 151, 151, .3);
+}
+
+/* кружок о выполнении таска */
+.complete_btn {
+	display: inline-block;
+	margin: 0 16px;
+	top: calc(50% - 14px);
+	left: 16px;
+	width: 26px;
+	height: 26px;
+	border-radius: 50%;
+	border: 1px solid rgba(151, 151, 151, .3);
+}
+
+.complete_btn:hover {
+	border-color: rgba(18, 217, 46, .5);
+}
+
+/* кружок о выполнении таска (чекнутый) */
+.complete_btn_checked {
+	font-size: 20px;
+	font-weight: bold;
+	color: rgb(18, 217, 46);
+	text-align: center;
+	border-color: rgba(18, 217, 46, .5);
+}
+
+.complete_btn_checked::after {
+	content: '\2713';
+}
+
+/* текст таска */
+.task_text {
+	width: 80%;
+	padding: 16px 5px;
+	color: #4d4d4d;
+	border: 0;
+	font-size: 24px;
+	transition: .4s;
+	/*white-space: pre-line;
+	word-break: break-all;
+	overflow: visible;*/
+}
+
+.task_text:focus {
+	border: 0;
+	outline: 2px solid rgba(151, 151, 151, .3);
+}
+
+/* текст выполненного таска */
+.completed {
+	text-decoration: line-through;
+	opacity: .3;
+}
+
+/* кнопка удаления таска */
+.delete_btn {
+	display: none;
+	padding: 8px;
+	color: rgba(168, 11, 11, .5);
+	font-weight: bold;
+}
+
+.delete_btn::before {
+	content: '\2716';
+	top: calc(50% - 14px);
+}
+
+.form_new_task:hover .delete_btn {
+	display: inline-block;
+}
+
+.delete_btn:hover {
+	color: rgb(168, 11, 11);
+}
+
+.toolbar {
+	display: none;
+	justify-content: space-between;
+	padding: 10px 16px;
+	background: #fefefe;
+	font-size: 15px;
+	user-select: none;
+}
+
+.items_left {
+	cursor: default;
+}
+
+.sort_btns span {
+	padding: 3px 8px;
+	border: 1px solid transparent;
+	border-radius: 3px;
+	cursor: pointer;
+}
+
+.sort_btns span:hover {
+	border: 1px solid rgba(168, 11, 11, .2);
+}
+
+.sort_btns_click {
+	border: 1px solid rgba(168, 11, 11, .4) !important;
+}
+
+.clear_completed {
+	visibility: hidden;
+}
+
+.clear_completed_visible {
+	visibility: visible;
+}
+
+.clear_completed:hover {
+	text-decoration: underline;
+	cursor: pointer;
+}
