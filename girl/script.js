@@ -10,7 +10,7 @@ photo.addEventListener('click', function(e) {
 	cap.style.left = `${x}px`;
 	cap.style.top = `${y}px`;
 
-	if ( (x > 90 && x < 120) && (y > -8 && y < 14) ) {
+	if ( (x > 95 && x < 120) && (y > -8 && y < 19) ) {
 		mask.classList.add('mask_hide');
 		photo.classList.add('photo_color');
 	}
