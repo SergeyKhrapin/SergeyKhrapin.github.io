@@ -15,6 +15,7 @@
 .cap {
 	position: absolute;
 	top: 268px;
+	left: 0;
 	cursor: pointer;
 	transition: .5s;
 }
