@@ -1,0 +1,51 @@
+body, html {
+  background: #18F11D;
+  cursor: pointer;
+}
+
+/* стили для появляющихся цветов */
+div {
+  position: absolute;
+  width: 110px;
+  height: 110px;
+  background-repeat: no-repeat;
+}
+
+.wrapper {
+  width: auto;
+  height: auto;
+  user-select: none;
+}
+
+.flowers {
+  position: static;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  animation-name: effect;
+  animation-duration: 1s;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes effect {
+  100% {
+    transform: scale(1.3);
+  }
+}
+
+.camomile {
+  background: url(images/camomile.png) 100%/cover;
+  animation-delay: 0s;
+}
+
+.red_flower {
+  background: url(images/red_flower.png) 100%/cover;
+  animation-delay: .5s;
+}
+
+.purple_flower {
+  background: url(images/purple_flower.png) 100%/cover;
+  animation-delay: 1s;
+}
