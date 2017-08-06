@@ -1,0 +1,215 @@
+body {
+	position: relative;
+}
+
+.container {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-webkit-flex-wrap: wrap;
+	-moz-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	-o-flex-wrap: wrap;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	padding: 20px;
+}
+
+.workspace {
+	position: relative;
+	width: 81%;
+	height: 700px;
+	background: #D7D5D5;
+	border-radius: 4px;
+}
+
+.sidebar {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-webkit-flex-wrap: wrap;
+	-moz-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	-o-flex-wrap: wrap;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	position: relative;
+	width: 17%;
+	padding: 24px;
+	background: #D7D5D5;
+	border-radius: 4px;
+	box-sizing: border-box;
+	-ms-align-self: flex-start;
+	align-self: flex-start;
+}
+
+button,
+input {
+	width: 100%;
+	margin: 5px 0;
+	border: 0;
+	outline: 0;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+button:hover {
+	box-shadow: 3px 3px 3px gray;
+}
+
+.sidebar button {
+	padding: 12px;
+	background: #595353;
+	color: orange;
+}
+
+
+/* New element - start */
+.new_el {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 80px;
+	height: 80px;
+	padding: 5px;
+	cursor: default;
+	user-select: none;
+	word-break: break-all;
+	box-sizing: border-box;
+	transform: scale(0);
+	transition: transform .4s;
+}
+
+/* New element - end */
+
+
+/* Context menu - start */
+.context_menu {
+	position: absolute;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-webkit-flex-direction: column;
+	-moz-flex-direction: column;
+	-ms-flex-direction: column;
+	-o-flex-direction: column;
+	flex-direction: column;
+	-ms-align-items: center;
+	align-items: center;
+	width: 160px;
+	padding: 20px;
+	background: #ccc;
+	border-radius: 4px;
+	box-shadow: 3px 3px 3px gray;
+}
+
+.context_menu button {
+	padding: 4px 8px;
+	background: orange;
+}
+
+input {
+	height: 26px;
+	padding: 0 40px;
+	background: orange;
+	box-sizing: border-box;
+}
+
+input[type=number] {
+	cursor: default;
+}
+
+.confirm_delete_all {
+	display: none;
+	justify-content: space-between;
+}
+
+.confirm_delete,
+.confirm_delete_all {
+	width: 100%;
+}
+
+.confirm_delete .del,
+.confirm_delete_all .del_all {
+	width: 48%;
+	background: #F31201;
+}
+
+.confirm_delete .cancel,
+.confirm_delete_all .cancel_all {
+	width: 48%;
+	background: #1FC50E;
+}
+
+.confirm_delete_all .del_all,
+.confirm_delete_all .cancel_all {
+	color: #595353;
+}
+/* Context menu - end */
+
+
+/* mask/popup - start */
+.mask {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	z-index: -1;
+	background: rgba(0, 0, 0, .6);
+	opacity: 0;
+	transition: .3s;
+}
+
+.mask_show {
+	z-index: 9;
+	opacity: 1;
+}
+
+.popup_wrapper {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	display: none;
+	overflow: hidden;
+}
+
+.popup {
+	position: absolute;
+	top: -100%;
+	left: calc(50% - 138px);
+	z-index: 10;
+	padding: 40px;
+	background: #fff;
+	color: #595353;
+	font-size: 24px;
+	border: 1px solid #595353;
+	border-radius: 8px;
+	transition: .4s;
+}
+/* mask/popup - end */
+
+@media (max-width: 1300px) {
+	.workspace,
+	.sidebar {
+		width: 100%;
+	}
+
+	.workspace {
+		margin-top: 15px;
+		order: 2;
+	}
+
+	.sidebar button,
+	.confirm_delete_all {
+		width: 23%;
+	}
+}
