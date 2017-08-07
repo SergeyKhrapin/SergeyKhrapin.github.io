@@ -69,7 +69,7 @@ function manipulation() {
 		// контекстное меню
 		$(`
 			<div class="context_menu" style="z-index: 9999">
-				<button class="image" title='beta version! file must be in the root!'>
+				<button class="image">
 					<label for="image">
 						Add image
 						<span><i class="fa fa-lock" aria-hidden="true"></i>PRO</span>
@@ -102,16 +102,17 @@ function manipulation() {
 
 		// добавление изображения при смене значения инпута input_image
 		$('.input_image').on('change', function() {
-			var input = $('.input_image'),
-				path;
+			// var input = $('.input_image'),
+			// 	path;
+			// path = input[0].value.slice(0, input[0].value.indexOf('fakepath')) + input[0].files[0].name;
+			// console.log(path);
 
-			path = input[0].value.slice(0, input[0].value.indexOf('fakepath')) + input[0].files[0].name;
+			var path = window.URL.createObjectURL($('.input_image')[0].files[0]);
 			editableElem.css('backgroundImage', 'url(' + path + ')');
 
-			$('.image label').text('Delete image');
-			console.log(path);
-
-			// var path = window.URL.createObjectURL($('.input_image')[0].files[0]);
+			// path получается вида blob:http://geek.zzz.com.ua/b71d5338-d075-42ac-8a42-44b5e7b0f5a9
+			// !!! каждый раз после перезагрузки path изменяется, поэтому изображение не отображается
+			// Но! После перезагрузки изображение все-таки отображается, т.к. кешируется браузером))
 
 			$contextMenu.remove();
 		})
