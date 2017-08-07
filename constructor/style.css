@@ -55,6 +55,7 @@ input {
 	outline: 0;
 	border-radius: 4px;
 	cursor: pointer;
+	transition: box-shadow .2s;
 }
 
 button:hover {
@@ -76,6 +77,9 @@ button:hover {
 	width: 80px;
 	height: 80px;
 	padding: 5px;
+	background-repeat: no-repeat;
+	-webkit-background-size: cover;
+	background-size: cover;
 	cursor: default;
 	user-select: none;
 	word-break: break-all;
@@ -123,6 +127,53 @@ input {
 
 input[type=number] {
 	cursor: default;
+}
+
+.context_menu .image {
+	padding: 0;
+}
+
+.context_menu .image:hover span {
+	animation: effect .07s 6 alternate;
+}
+
+@keyframes effect {
+	0% {
+		transform: rotateZ(-18deg);
+	}
+	100% {
+		transform: rotateZ(-6deg);
+	}
+}
+
+.image label {
+	position: relative;
+	display: inline-block;
+	width: 100%;
+	padding: 4px 8px;
+	cursor: pointer;
+	box-sizing: border-box;
+}
+
+.image span {
+	position: absolute;
+	top: -14px;
+	right: -17px;
+	transform: rotateZ(-12deg);
+	background: #595353;
+	padding: 2px 4px;
+	border-radius: 8px;
+	color: #12EC1B;
+}
+
+.image span i {
+	margin-right: 3px;
+	color: #F90B0B;
+	font-size: 20px;
+}
+
+.input_image {
+	display: none;
 }
 
 .confirm_delete_all {

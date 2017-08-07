@@ -17,7 +17,7 @@ var z = 1;
 function createElement() {
 	// создаю новые элементы и сразу прописываю им стили в js, а не в css, для того, чтобы эти значения присвоились в value инпутов в контекстном меню
 	$('<div class="new_el"></div>').prependTo($workspace).css({
-		background: '#808080',
+		backgroundColor: '#808080',
 		color: '#fff',
 		fontSize: '16px',
 		borderRadius: '4px',
@@ -69,6 +69,13 @@ function manipulation() {
 		// контекстное меню
 		$(`
 			<div class="context_menu" style="z-index: 9999">
+				<button class="image" title='beta version! file must be in the root!'>
+					<label for="image">
+						Add image
+						<span><i class="fa fa-lock" aria-hidden="true"></i>PRO</span>
+					</label>
+				</button>
+				<input id='image' class="input_image" type="file" />
 				<button class="edit">Edit content</button>
 				<button class="resize">Resize</button>
 				<button class="bg_color">Background color</button>
@@ -91,6 +98,22 @@ function manipulation() {
 
 		$contextMenu.on('click mousedown', function(e) {
 			e.stopPropagation();
+		})
+
+		// добавление изображения при смене значения инпута input_image
+		$('.input_image').on('change', function() {
+			var input = $('.input_image'),
+				path;
+
+			path = input[0].value.slice(0, input[0].value.indexOf('fakepath')) + input[0].files[0].name;
+			editableElem.css('backgroundImage', 'url(' + path + ')');
+
+			$('.image label').text('Delete image');
+			console.log(path);
+
+			// var path = window.URL.createObjectURL($('.input_image')[0].files[0]);
+
+			$contextMenu.remove();
 		})
 
 		// редактирование содержимого элемента при клике по Edit content - способ 2
@@ -132,10 +155,11 @@ function manipulation() {
 			// !!!
 			// в качестве значения цвета инпута (value) устанавливаю значение цвета фона элемента
 			// использую функцию rgbToHex(), т.к. цвет инпута (value) задается в формате HEX, а фон элемента - в формате RGB
-			$('.input_bg_color')[0].value = rgbToHex(editableElem[0].style.background);
+			$('.input_bg_color')[0].value = rgbToHex(editableElem[0].style.backgroundColor);
 
 			$('.input_bg_color').on('change', function() {
-				editableElem.css('background', $('.input_bg_color')[0].value);
+				editableElem.css('backgroundColor', $('.input_bg_color')[0].value);
+				editableElem.css('backgroundImage', '');
 				$contextMenu.remove();
 			})
 		})
