@@ -236,15 +236,41 @@ input[type=number] {
 .popup {
 	position: absolute;
 	top: -100%;
-	left: calc(50% - 138px);
+	opacity: 0;
 	z-index: 10;
 	padding: 40px;
 	background: #fff;
 	color: #595353;
-	font-size: 24px;
 	border: 1px solid #595353;
 	border-radius: 8px;
-	transition: .4s;
+	transition: top .6s, opacity .5s .25s;
+}
+
+.popup_save {
+	font-size: 24px;
+}
+
+.lang {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: flex-end;
+	color: #595353;
+}
+
+.lang span {
+	margin: 0 3px;
+	cursor: default;
+}
+
+.ukr {
+	font-weight: bold;
+}
+
+.lang span:hover {
+	text-decoration: underline;
 }
 /* mask/popup - end */
 

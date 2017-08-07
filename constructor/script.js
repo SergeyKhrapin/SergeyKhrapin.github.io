@@ -4,9 +4,31 @@ $('body').css('minHeight', window.innerHeight + 'px');
 
 const $workspace = $('.workspace');
 
-// заполняю рабочую область html-разметкой, сохраненной в хранилище
+// рабочую область и инструкцию заполняю данными, сохраненными в хранилище
 $(document).ready(function() {
-	$workspace.html(localStorage.getItem('interface'));
+	if (localStorage.getItem('interface')) {
+		$workspace.html(localStorage.getItem('interface'));
+	}
+	if(localStorage.getItem('instruction')) {
+		$('.instructions').html(localStorage.getItem('instruction'));
+
+		if ( $('div').is('.ukrainian') ) {
+			$('.ukr').css('fontWeight', 'bold');
+			$('.rus').css('fontWeight', 'normal');
+			$('.eng').css('fontWeight', 'normal');
+		}
+		else if ( $('div').is('.russian') ) {
+			$('.rus').css('fontWeight', 'bold');
+			$('.ukr').css('fontWeight', 'normal');
+			$('.eng').css('fontWeight', 'normal');
+		}
+
+		else if ( $('div').is('.english') ) {
+			$('.eng').css('fontWeight', 'bold');
+			$('.rus').css('fontWeight', 'normal');
+			$('.ukr').css('fontWeight', 'normal');
+		}
+	}
 })
 
 $(document).ready(manipulation);
@@ -252,23 +274,128 @@ $('.delete_all').on('click', function(e) {
 	})
 })
 
+// button How to use (sidebar)
+$('.how').on('click', function(e) {
+	$('.mask').addClass('mask_show');
+	$('.popup_wrapper').css('display', 'block');
+	$('.popup_how').addClass('shown').css({
+		top: window.innerHeight/2 - $('.popup_how')[0].offsetHeight/2,
+		left: '10%',
+		right: '10%',
+		opacity: 1
+	});
+})
+
+
+// Change language - start
+$('.rus').on('click', function(e) {
+	$(this).css('fontWeight', 'bold');
+	$('.eng').css('fontWeight', 'normal');
+	$('.ukr').css('fontWeight', 'normal');
+
+	$('.instructions').html(`
+		<div class="russian" hidden></div>
+		<p>Для того, чтобы начать пользоваться приложением, нажмите кнопку <b>Add element</b> в правом сайдбаре.</p>
+		<p>Появившийся в рабочей области элемент вы можете модифицировать с помощью контекстного меню (клик правой кнопкой мыши на элементе).</p>
+		<p>Доступные опции редактирования:</p>
+		<ul>
+			<li><b>Add image</b> - установка изображения с локального компьютера в качестве фона элемента. Доступно только в платной версии))</li>
+			<li><b>Edit content</b> - редактирование текстового содержимого элемента (также возможно при двойном клике по элементу)</li>
+			<li><b>Resize</b> - изменение размеров элемента путем его растягивания</li>
+			<li><b>Background color</b> - установка цвета фона элемента</li>
+			<li><b>Text color</b> - цвет текста</li>
+			<li><b>Font size</b> - размер шрифта</li>
+			<li><b>Border radius</b> - радиус скругления углов элемента</li>
+			<li><b>Z-index</b> - элемент, у которого это значение больше, будет находиться поверх другого элемента</li>
+			<li><b>Delete element</b> - удаление элемента</li>
+		</ul>
+		<p><b>Delete all</b> - очистка рабочей области</p>
+		<p><b>SAVE</b> - сохранение всех изменений в локальное хранилище</p>
+	`);
+})
+
+$('.eng').on('click', function(e) {
+	$(this).css('fontWeight', 'bold');
+	$('.rus').css('fontWeight', 'normal');
+	$('.ukr').css('fontWeight', 'normal');
+
+	$('.instructions').html(`
+		<div class="english" hidden></div>
+		<p>To start using the application, click the <b>Add element</b> button in the right sidebar.</p>
+		<p>The element that appears in the workspace can be modified using the context menu (right-clicking on the element).</p>
+		<p>The available editing options are:</p>
+		<ul>
+			<li><b>Add image</b> - set the image from the local computer as the background of the item. Available only in paid version))</li>
+			<li><b>Edit content</b> - editing the text content of the element (also possible when double clicking on an element)</li>
+			<li><b>Resize</b> - resizing an element by stretching it</li>
+			<li><b>Background color</b> - setting the background color of an element</li>
+			<li><b>Text color</b> - setting text color</li>
+			<li><b>Font size</b> - setting font size</li>
+			<li><b>Border radius</b> - setting border radius</li>
+			<li><b>Z-index</b> - the element whose value is greater will be on top of another element</li>
+			<li><b>Delete element</b> - delete element</li>
+		</ul>
+		<p><b>Delete all</b> - cleaning the workspace</p>
+		<p><b>SAVE</b> - saving all changes to local storage</p>
+	`);
+})
+
+$('.ukr').on('click', function(e) {
+	$(this).css('fontWeight', 'bold');
+	$('.rus').css('fontWeight', 'normal');
+	$('.eng').css('fontWeight', 'normal');
+
+	$('.instructions').html(`
+		<div class="ukrainian" hidden></div>
+		<p>Для того, щоб почати користуватися додатком, натисніть кнопку <b>Add element</b> у сайдбарі праворуч.</p>
+		<p>Елемент, що з'явився у робочому просторі, можна модифікувати за допомогою контекстного меню (клік правою кнопкою миші на элементі).</p>
+		<p>Доступні опції редагування:</p>
+		<ul>
+			<li><b>Add image</b> - встановлення зображення з локального комп'ютера у якості фона елемента. Доступно тільки в платній версії))</li>
+			<li><b>Edit content</b> - редагування текстового вмісту елемента (також можливе при подвійному кліку по елементу)</li>
+			<li><b>Resize</b> - зміна розмірів елемента шляхом його розтягування</li>
+			<li><b>Background color</b> - встановлення коліру фону елемента</li>
+			<li><b>Text color</b> - колір тексту</li>
+			<li><b>Font size</b> - розмір шрифту</li>
+			<li><b>Border radius</b> - радіус заокруглення кутів елемента</li>
+			<li><b>Z-index</b> - елемент, у якого це значення більше, буде знаходитися поверх іншого елемента</li>
+			<li><b>Delete element</b> - видалення елемента</li>
+		</ul>
+		<p><b>Delete all</b> - очистка робочого простору</p>
+		<p><b>SAVE</b> - збереження усіх змін в локальне сховище</p>
+	`);
+})
+// Change language - end
+
 // button SAVE (sidebar)
 $('.save').on('click', function(e) {
 	localStorage.setItem('interface', $workspace.html());
+	localStorage.setItem('instruction', $('.instructions').html());
 
 	$('.mask').addClass('mask_show');
 	$('.popup_wrapper').css('display', 'block');
-	$('.popup').css('top', window.innerHeight/2 - $('.popup')[0].offsetHeight/2);
+
+	$('.popup_save').addClass('shown').css({
+		top: window.innerHeight/2 - $('.popup_save')[0].offsetHeight/2,
+		left: window.innerWidth/2 - $('.popup_save')[0].offsetWidth/2,
+		opacity: 1
+	});
 })
 
 // click mask
 $('.mask').on('click', function(e) {
-	$('.mask').removeClass('mask_show');
-	$('.popup').css('top', '100%');
+	setTimeout(function() {
+		$('.mask').removeClass('mask_show');
+	}, 200)
+	$('.shown').css('top', '100%');
 	setTimeout(function() {
 		$('.popup_wrapper').css('display', 'none');
-		$('.popup').css('top', '-100%');
-	}, 400)
+		$('.shown').css({
+			top: '-100%',
+			opacity: 0
+		});
+		$('.popup').removeClass('shown');
+	}, 600)
 })
 
 // click window
