@@ -296,7 +296,7 @@ $('.rus').on('click', function(e) {
 	$('.instructions').html(`
 		<div class="russian" hidden></div>
 		<p>Для того, чтобы начать пользоваться приложением, нажмите кнопку <b>Add element</b> в правом сайдбаре.</p>
-		<p>Появившийся в рабочей области элемент вы можете модифицировать с помощью контекстного меню (клик правой кнопкой мыши на элементе).</p>
+		<p>Появившийся в рабочей области элемент можно перетягивать, а также модифицировать с помощью контекстного меню (клик правой кнопкой мыши на элементе).</p>
 		<p>Доступные опции редактирования:</p>
 		<ul>
 			<li><b>Add image</b> - установка изображения с локального компьютера в качестве фона элемента. Доступно только в платной версии))</li>
@@ -322,7 +322,7 @@ $('.eng').on('click', function(e) {
 	$('.instructions').html(`
 		<div class="english" hidden></div>
 		<p>To start using the application, click the <b>Add element</b> button in the right sidebar.</p>
-		<p>The element that appears in the workspace can be modified using the context menu (right-clicking on the element).</p>
+		<p>The element appeared in the work area can be dragged and modified using the context menu (right-clicking on the element).</p>
 		<p>The available editing options are:</p>
 		<ul>
 			<li><b>Add image</b> - set the image from the local computer as the background of the item. Available only in paid version))</li>
