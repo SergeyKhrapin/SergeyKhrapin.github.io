@@ -22,7 +22,6 @@ $(document).ready(function() {
 			$('.ukr').css('fontWeight', 'normal');
 			$('.eng').css('fontWeight', 'normal');
 		}
-
 		else if ( $('div').is('.english') ) {
 			$('.eng').css('fontWeight', 'bold');
 			$('.rus').css('fontWeight', 'normal');
