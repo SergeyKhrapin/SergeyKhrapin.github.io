@@ -5,28 +5,82 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>ppi</title>
+
+	<!-- favicons -->
+	<link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
+	<link rel="manifest" href="favicons/manifest.json">
+	<link rel="mask-icon" href="favicons/safari-pinned-tab.svg" color="#5bbad5">
+	<link rel="shortcut icon" href="favicons/favicon.ico">
+	<meta name="msapplication-config" content="favicons/browserconfig.xml">
+	<meta name="theme-color" content="#ffffff">
+	<!-- favicons -->
+
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
 	<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<div class="block1">360x294 pixels</div>
-<div class="block2">216x640 pixels</div>
-<div class="block3">
-	100x1100 pixels
-	<div class="block3__mark1 block3__mark">400</div>
-	<div class="block3__mark2 block3__mark">500</div>
-	<div class="block3__mark3 block3__mark">600</div>
-	<div class="block3__mark4 block3__mark">700</div>
-	<div class="block3__mark5 block3__mark">800</div>
-	<div class="block3__mark6 block3__mark">900</div>
-	<div class="block3__mark7 block3__mark">1000</div>
-</div>
+	<div class="data">
+		<span class='parameter'>resolution (logical)</span><span class='value res_l'></span>
+		<span class='parameter'>device pixel ratio</span><span class='value dpr'></span>
+		<span class='parameter'>resolution (physical)</span><span class='value res_p'></span>
+		<span class='parameter'>diagonal (in)</span><span class='value'><input type="text" class='diagonal'></span>
+		<span class='parameter'>ppi</span><span class='value ppi'></span>
+	</div>
 
-<p>Asus ZenFone - 5" / 1280x720 / ppi 294 (коэффициент - x2)</p>
-<p>Asus Nexus 7 - 7" / 1280x800 / ppi 216 (коэффициент - x1.34)</p>
-<p>Asus X551M - 15.6" / 1366x768 / ppi 100</p>
+	<button class='measure'>measure</button>
+	
+	<div class="ruler">
+		<div class="ruler_vertical">
+			<div class="mark1 mark">300</div>
+			<div class="mark2 mark small">350</div>
+			<div class="mark3 mark">400</div>
+			<div class="mark4 mark small">450</div>
+			<div class="mark5 mark">500</div>
+			<div class="mark6 mark small">550</div>
+			<div class="mark7 mark">600</div>
+			<div class="mark8 mark small">650</div>
+			<div class="mark9 mark">700</div>
+			<div class="mark10 mark small">750</div>
+			<div class="mark11 mark">800</div>
+			<div class="mark12 mark small">850</div>
+			<div class="mark13 mark">900</div>
+			<div class="mark14 mark small">950</div>
+			<div class="mark15 mark">1000</div>
+			<div class="mark16 mark small">1050</div>
+		</div>
+
+		<div class="ruler_horizontal">
+			<div class="mark0 mark">0</div>
+			<div class="mark1 mark">300</div>
+			<div class="mark2 mark small">350</div>
+			<div class="mark3 mark">400</div>
+			<div class="mark4 mark small">450</div>
+			<div class="mark5 mark">500</div>
+			<div class="mark6 mark small">550</div>
+			<div class="mark7 mark">600</div>
+			<div class="mark8 mark small">650</div>
+			<div class="mark9 mark">700</div>
+			<div class="mark10 mark small">750</div>
+			<div class="mark11 mark">800</div>
+			<div class="mark12 mark small">850</div>
+			<div class="mark13 mark">900</div>
+			<div class="mark14 mark small">950</div>
+			<div class="mark15 mark">1000</div>
+			<div class="mark16 mark small">1050</div>
+		</div>
+	</div>
+
+	
+
+<!-- 	<p>Asus ZenFone - 5" / 1280x720 / ppi 294 (коэффициент - x2)</p>
+	<p>Asus Nexus 7 - 7" / 1280x800 / ppi 216 (коэффициент - x1.33)</p>
+	<p>Asus X551M - 15.6" / 1366x768 / ppi 100</p> -->
+
+	<script src='script.js'></script>
 
 </body>
 </html>
