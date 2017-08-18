@@ -1,0 +1,210 @@
+body {
+    position: relative;
+    background: radial-gradient(#fff, #4E4D4D);
+}
+
+.wrapper {
+    padding: 50px 20px;
+}
+
+.form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 18px #4E4D4D;
+}
+
+.form h1 {
+    width: 100%;
+    margin-top: 10px;
+    text-align: center;
+    color: #4E4D4D;
+}
+
+.form input,
+.form button {
+    padding: 5px;
+    border: 1px solid gray;
+    border-radius: 4px;
+    outline: 0;
+}
+
+.form button,
+.form input[type=submit] {
+    width: 130px;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.form button:hover,
+.form input[type=submit]:hover {
+    box-shadow: 2px 2px 4px gray;
+}
+
+.form input[type=submit]:hover {
+    color: #fff;
+    background-color: #4E4D4D;
+}
+
+#driver,
+#email {
+    width: 130px;
+    box-sizing: border-box;
+    transition: .4s;
+}
+
+@media (max-width: 420px) {
+    #driver {
+        width: 130px !important;
+    }
+}
+
+hr {
+    margin: 20px 0;
+}
+
+.form_row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.form_row:last-of-type {
+    margin-top: 50px;
+    justify-content: flex-end;
+}
+
+.form_row span {
+    color: #767373;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.station,
+.passenger {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+    padding: 10px;
+    background: #E1E1E1;
+    border-radius: 4px;
+}
+
+.passenger {
+    position: relative;
+    flex-wrap: wrap;
+}
+
+.station label,
+.passenger label {
+    width: 45%;
+}
+
+.station input,
+.passenger input {
+    width: 47%;
+    box-sizing: border-box;
+}
+
+.station i,
+.passenger i {
+    padding: 5px;
+    font-size: 20px;
+    transition: .2s;
+}
+
+.input_station::placeholder {
+    color: red;
+    font-size: 12px;
+    opacity: .8;
+}
+
+.passenger input {
+    padding-right: 28px;
+}
+
+.passenger input::placeholder {
+    opacity: .6;
+}
+
+.passenger i {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.station i:hover,
+.passenger i:hover {
+    color: red;
+}
+
+.passenger select {
+    width: 47%;
+    margin-top: 8px;
+    border-radius: 4px;
+    outline: 0;
+}
+
+/* данные с формы - start */
+.data {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 10px;
+    font-size: 18px;
+}
+
+.data h3 {
+    color: #11B709;
+    text-align: center;
+}
+
+.data p {
+    margin: 28px 0 8px;
+    letter-spacing: 0.7px;
+}
+
+.data ol {
+    margin: 0;
+    letter-spacing: 0.7px;
+}
+/* данные с формы - end */
+
+
+/* сообщение о незаполненных полях - start */
+.error {
+    border-color: red !important;
+}
+
+.error_wrapper {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    display: none;
+    background-color: rgba(0, 0, 0, .7);
+    opacity: 0;
+}
+
+.error_message {
+    position: absolute;
+    padding: 30px;
+    background: #fff;
+    color: red;
+    font-size: 18px;
+    border-radius: 4px;
+    transform: scale(0);
+    -webkit-transition: transform .5s;
+    -moz-transition: transform .5s;
+    -ms-transition: transform .5s;
+    -o-transition: transform .5s;
+    transition: transform .5s;
+}
+/* сообщение о незаполненных полях - end */
