@@ -1,0 +1,390 @@
+body {
+	margin: 0;
+	padding-top: 83px;
+}
+
+h1 {
+	position: absolute;
+	top: 20px;
+	margin: 0;
+	width: 100%;
+	font-family: 'Orbitron', sans-serif;
+	text-align: center;
+	color: #343030;
+	font-size: 0;
+	animation: h1_animation 1.4s cubic-bezier(.96,.07,.99,.52) .2s forwards;
+}
+
+@keyframes h1_animation {
+	80% {
+		font-size: 32px;
+	}
+	95% {
+		text-shadow: none;
+	}
+	100% {
+		font-size: 32px;
+		text-shadow: 3px 3px 5px #45EEE0;
+	}
+}
+
+h1 span {
+	display: inline-block;
+	animation: h1_span_animation 3.5s 2.5s infinite;
+}
+
+@keyframes h1_span_animation {
+	2% {
+		transform: rotateZ(-20deg);
+	}
+	4% {
+		transform: rotateZ(20deg);
+	}
+	6% {
+		transform: rotateZ(-20deg);
+	}
+	8% {
+		transform: rotateZ(20deg);
+	}
+	10% {
+		transform: rotateZ(-20deg);
+	}
+	12% {
+		transform: rotateZ(20deg);
+	}
+	14% {
+		transform: none;
+	}
+}
+
+p {
+	margin-top: 0;
+	font-family: 'Lobster', cursive;
+	text-align: center;
+	color: #06989D;
+}
+
+h3 {
+	margin: 30px 0 0;
+	color: #45EEE0;
+	text-align: center;
+}
+
+h2 {
+	position: absolute;
+	margin: 0;
+	width: 100%;
+	font-family: 'Lobster', cursive;
+	color: #F212DA;
+	font-weight: normal;
+	text-align: center;
+}
+
+h2 i {
+	font-size: 24px;
+	font-style: normal;
+	margin-left: -3px;
+	animation: char_animation 5.5s linear infinite;
+}
+
+.char_c {
+	margin-right: 5px;
+}
+
+/* start - анимирование надписи Magic Button! */
+
+@keyframes char_animation {
+	10% {
+		font-size: 32px;
+		color: #45EEE0;
+	}
+	15% {
+		font-size: 24px;
+		color: #F212DA;
+	}
+}
+
+.char_M {
+	animation-delay: 0s;
+}
+
+.char_a {
+	animation-delay: .1s;
+}
+
+.char_g {
+	animation-delay: .2s;
+}
+
+.char_i {
+	animation-delay: .3s;
+}
+
+.char_c {
+	animation-delay: .4s;
+}
+
+.char_B {
+	animation-delay: .5s;
+}
+
+.char_u {
+	animation-delay: .6s;
+}
+
+.char_t1 {
+	animation-delay: .7s;
+}
+
+.char_t2 {
+	animation-delay: .8s;
+}
+
+.char_o {
+	animation-delay: .9s;
+}
+
+.char_n {
+	animation-delay: 1.0s;
+}
+/* end - анимирование надписи Magic Button! */
+
+.slider {
+	position: relative;
+	width: 600px;
+	height: 300px;
+	margin: 60px auto 0;
+	border-radius: 8px;
+	border: 1px solid #343030;
+	box-shadow: 0 0 12px;
+	overflow: hidden;
+}
+
+.slider .block_set {
+	position: relative;
+	display: flex;
+	width: 3000px;
+	left: 0;
+	transition: .8s;
+}
+
+.slider .block_set img {
+	width: 600px;
+	height: 300px;
+	object-fit: cover;
+}
+
+.slider > input,
+#radio_3 {
+	position: absolute;
+	bottom: 9px;
+	z-index: 10;
+	width: 16px;
+	height: 16px;
+	margin: 0;
+	opacity: 0;
+	cursor: pointer;
+}
+
+#radio_1 {
+	left: 242.5px;
+}
+
+#radio_2 {
+	left: 267.5px;
+}
+
+/* у третьего инпута координаты считаются не от блока .slider, а от окна браузера, т.к. этот инпут вынесен за пределы блока .slider */
+#radio_3 {
+	left: calc(50% - 7px);
+	top: 491px;
+}
+
+#radio_4 {
+	left: 317.5px;
+}
+
+#radio_5 {
+	left: 342.5px;
+}
+
+.slider > .label {
+	position: absolute;
+	right: 0;
+	top: calc(50% - 20px);
+	z-index: 10;
+	cursor: pointer;
+}
+
+.slider > .label::before {
+	content: '';
+	display: none;
+	position: absolute;
+	right: 0;
+	width: 20px;
+	height: 0;
+	border-left: 10px solid #343030;
+	border-top: 20px solid transparent;
+	border-bottom: 20px solid transparent;
+}
+
+.slider > .label::after {
+	content: '';
+	display: none;
+	position: absolute;
+	left: -600px;
+	width: 20px;
+	height: 0;
+	border-right: 10px solid #343030;
+	border-top: 20px solid transparent;
+	border-bottom: 20px solid transparent;
+}
+
+.slider > .label_2::before {
+	display: block;
+}
+
+.slider > .label:hover::before {
+	border-left-color: #06989D;
+}
+
+.slider > .label:hover::after {
+	border-right-color: #06989D;
+}
+
+/*==============================
+	нажимаем инпуты
+===============================*/
+
+/* нажимаем первый инпут */
+
+#radio_1:checked ~ .block_set {
+	left: 0;
+}
+
+
+/* нажимаем второй инпут */
+
+#radio_2:checked ~ .block_set {
+	left: -600px;
+}
+
+#radio_2:checked ~ .label_1::after {
+	display: block;
+}
+
+#radio_2:checked ~ .label_2 {
+	display: none;
+}
+
+#radio_2:checked ~ .label_3::before {
+	display: block;
+}
+
+
+/* нажимаем третий инпут (он вынесен за пределы блока .slider!) */
+
+#radio_3:checked ~ .slider .block_set {
+	left: -1200px;
+}
+
+#radio_3:checked ~ .slider .label_2::after {
+	display: block;
+}
+
+#radio_3:checked ~ .slider .label_2::before {
+	display: none;
+}
+
+#radio_3:checked ~ .slider .label_3 {
+	display: none;
+}
+
+#radio_3:checked ~ .slider .label_4::before {
+	display: block;
+}
+
+
+/* нажимаем четвертый инпут */
+
+#radio_4:checked ~ .block_set {
+	left: -1800px;
+}
+
+#radio_4:checked ~ .label_3::after {
+	display: block;
+}
+
+#radio_4:checked ~ .label_4,
+#radio_4:checked ~ .label_2 {
+	display: none;
+}
+
+#radio_4:checked ~ .label_5::before {
+	display: block;
+}
+
+
+/* нажимаем пятый инпут */
+
+#radio_5:checked ~ .block_set {
+	left: -2400px;
+}
+
+#radio_5:checked ~ .label_4::after {
+	display: block;
+}
+
+#radio_5:checked ~ .label_5,
+#radio_5:checked ~ .label_2 {
+	display: none;
+}
+
+/*=============================================
+	кружочки
+=============================================*/
+
+.slider > .circle {
+	position: absolute;
+	bottom: 10px;
+	z-index: 1;
+	width: 15px;
+	height: 15px;
+	border-radius: 50%;
+	background: #45EEE0;
+	opacity: .4;
+}
+
+.slider > .circle_1 {
+	left: 242.5px;
+}
+
+.slider > .circle_2 {
+	left: 267.5px;
+}
+
+.slider > .circle_3 {
+	left: 292.5px;
+}
+
+.slider > .circle_4 {
+	left: 317.5px;
+}
+
+.slider > .circle_5 {
+	left: 342.5px;
+}
+
+#radio_1:checked ~ .circle_1,
+#radio_2:checked ~ .circle_2,
+#radio_3:checked ~ .slider .circle_3, /* (третий инпут вынесен за пределы блока .slider!) */
+#radio_4:checked ~ .circle_4,
+#radio_5:checked ~ .circle_5 {
+	background: #06989D;
+	opacity: 1;
+}
+
+/* убираю рекламную фигню */
+.cbalink {
+	display: none;
+}

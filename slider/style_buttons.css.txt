@@ -1,0 +1,368 @@
+/* 	СТИЛИ ВОЛШЕБНОЙ КНОПКИ */
+
+/*
+схема расположения лейблов в кнопке
+ 1  2  3  4  5
+ 6  7  8  9 10
+11 12 13 14 15
+*/
+
+#radio_3:checked ~ .magic_button {
+	opacity: 1;
+	visibility: visible;
+	transition: .4s;
+}
+
+.magic_button {
+	opacity: 0;
+	visibility: hidden;
+	position: relative;
+	margin: 40px auto 0;
+	width: 100px;
+	height: 60px;
+	color: #fff;
+	text-align: center;
+	line-height: 60px;
+	text-transform: capitalize;
+	font-style: italic;
+	border-radius: 5px;
+	box-shadow: 2px 2px 8px #343030;
+	background-color: #26a69a;
+	cursor: pointer;
+	overflow: hidden;
+}
+
+.magic_button:hover {
+	background-color: #2bbbad;
+}
+
+.magic_button span {
+	display: inline-block;
+	animation: click_me .5s infinite alternate;
+}
+
+@keyframes click_me {
+	100% {
+		transform: scale(1.2);
+	}
+}
+
+.magic_button input {
+	position: absolute;
+	left: -9999px;
+}
+
+.magic_button label {
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	/*border-radius: 50%;*/ /* скругляю лейблы не сразу, а в момент начала анимации (т.к. квадратные лейблы ПОЛНОСТЬЮ заполняют собой кнопку и нет "мертвых" зон) */
+	opacity: 0;
+	cursor: pointer;
+}
+
+.magic_button .label_1,
+.magic_button .label_copy_1 {
+	background-color: #F40A0A;
+}
+
+.magic_button .label_2,
+.magic_button .label_copy_2 {
+	background-color: #F65E9E;
+}
+
+.magic_button .label_3,
+.magic_button .label_copy_3 {
+	background-color: #EA19F7;
+}
+
+.magic_button .label_4,
+.magic_button .label_copy_4 {
+	background-color: #B318F3;
+}
+
+.magic_button .label_5,
+.magic_button .label_copy_5 {
+	background-color: #4810E9;
+}
+
+.magic_button .label_6,
+.magic_button .label_copy_6 {
+	background-color: #1491F1;
+}
+
+.magic_button .label_7,
+.magic_button .label_copy_7 {
+	background-color: #2117EB;
+}
+
+.magic_button .label_8,
+.magic_button .label_copy_8 {
+	background-color: #085484;
+}
+
+.magic_button .label_9,
+.magic_button .label_copy_9 {
+	background-color: #0FB5FA;
+}
+
+.magic_button .label_10,
+.magic_button .label_copy_10 {
+	background-color: #0EF3EB;
+}
+
+.magic_button .label_11,
+.magic_button .label_copy_11 {
+	background-color: #088A17;
+}
+
+.magic_button .label_12,
+.magic_button .label_copy_12 {
+	background-color: #0AF536;
+}
+
+.magic_button .label_13,
+.magic_button .label_copy_13 {
+	background-color: #7AF30E;
+}
+
+.magic_button .label_14,
+.magic_button .label_copy_14 {
+	background-color: #F5ED0C;
+}
+
+.magic_button .label_15,
+.magic_button .label_copy_15 {
+	background-color: #F68122;
+}
+
+.magic_button .label_1,
+.magic_button .label_copy_1 {
+	top: 0;
+	left: 0;
+}
+
+.magic_button .label_2,
+.magic_button .label_copy_2 {
+	top: 0;
+	left: 20px;
+}
+
+.magic_button .label_3,
+.magic_button .label_copy_3 {
+	top: 0;
+	left: 40px;
+}
+
+.magic_button .label_4,
+.magic_button .label_copy_4 {
+	top: 0;
+	left: 60px;
+}
+
+.magic_button .label_5,
+.magic_button .label_copy_5 {
+	top: 0;
+	left: 80px;
+}
+
+.magic_button .label_6,
+.magic_button .label_copy_6 {
+	top: 20px;
+	left: 0;
+}
+
+.magic_button .label_7,
+.magic_button .label_copy_7 {
+	top: 20px;
+	left: 20px;
+}
+
+.magic_button .label_8,
+.magic_button .label_copy_8 {
+	top: 20px;
+	left: 40px;
+}
+
+.magic_button .label_9,
+.magic_button .label_copy_9 {
+	top: 20px;
+	left: 60px;
+}
+
+.magic_button .label_10,
+.magic_button .label_copy_10 {
+	top: 20px;
+	left: 80px;
+}
+
+.magic_button .label_11,
+.magic_button .label_copy_11 {
+	top: 40px;
+	left: 0;
+}
+
+.magic_button .label_12,
+.magic_button .label_copy_12 {
+	top: 40px;
+	left: 20px;
+}
+
+.magic_button .label_13,
+.magic_button .label_copy_13 {
+	top: 40px;
+	left: 40px;
+}
+
+.magic_button .label_14,
+.magic_button .label_copy_14 {
+	top: 40px;
+	left: 60px;
+}
+
+.magic_button .label_15,
+.magic_button .label_copy_15 {
+	top: 40px;
+	left: 80px;
+}
+
+.magic_button .label_copy {
+	visibility: hidden; /* лейбл-копию изначально нельзя кликнуть */
+	transition: .7s; /* лейбл-копия при клике по ней будет исчезать с задержкой (чтобы успела запуститься анимация) */
+}
+
+.magic_button .input_1:checked ~ .label_copy_1,
+.magic_button .input_2:checked ~ .label_copy_2,
+.magic_button .input_3:checked ~ .label_copy_3,
+.magic_button .input_4:checked ~ .label_copy_4,
+.magic_button .input_5:checked ~ .label_copy_5,
+.magic_button .input_6:checked ~ .label_copy_6,
+.magic_button .input_7:checked ~ .label_copy_7,
+.magic_button .input_8:checked ~ .label_copy_8,
+.magic_button .input_9:checked ~ .label_copy_9,
+.magic_button .input_10:checked ~ .label_copy_10,
+.magic_button .input_11:checked ~ .label_copy_11,
+.magic_button .input_12:checked ~ .label_copy_12,
+.magic_button .input_13:checked ~ .label_copy_13,
+.magic_button .input_14:checked ~ .label_copy_14,
+.magic_button .input_15:checked ~ .label_copy_15 {
+	visibility: visible; /* лейбл-копия появляется поверх основного лейбла после кликнутого основного чекбокса */
+}
+
+/* анимация для лейблов 1, 5, 6, 10, 11, 15 */
+.magic_button .input_1:checked ~ .label_1,
+.magic_button .input_5:checked ~ .label_5,
+.magic_button .input_6:checked ~ .label_6,
+.magic_button .input_10:checked ~ .label_10,
+.magic_button .input_11:checked ~ .label_11,
+.magic_button .input_15:checked ~ .label_15 {
+	animation: bubble_1_5_6_10_11_15 .8s;
+}
+
+.magic_button .input_copy_1:checked ~ .label_copy_1,
+.magic_button .input_copy_5:checked ~ .label_copy_5,
+.magic_button .input_copy_6:checked ~ .label_copy_6,
+.magic_button .input_copy_10:checked ~ .label_copy_10,
+.magic_button .input_copy_11:checked ~ .label_copy_11,
+.magic_button .input_copy_15:checked ~ .label_copy_15 {
+	animation: bubble_1_5_6_10_11_15 .8s; /* при клике лейбл-копия отрабатывает такую же анимацию, как и основной лейбл */
+}
+
+@keyframes bubble_1_5_6_10_11_15 {
+	0% {
+		border-radius: 50%;
+	}
+	50% {
+		opacity: 1;
+		transform: scale(10.5);
+	}
+	100% {
+		opacity: 0;
+		transform: scale(10.5);
+		border-radius: 50%;
+	}
+}
+
+/* анимация для лейблов 3, 7, 9, 13 */
+.magic_button .input_3:checked ~ .label_3,
+.magic_button .input_7:checked ~ .label_7,
+.magic_button .input_9:checked ~ .label_9,
+.magic_button .input_13:checked ~ .label_13 {
+	animation: bubble_3_7_9_13 .8s;
+}
+
+.magic_button .input_copy_3:checked ~ .label_copy_3,
+.magic_button .input_copy_7:checked ~ .label_copy_7,
+.magic_button .input_copy_9:checked ~ .label_copy_9,
+.magic_button .input_copy_13:checked ~ .label_copy_13 {
+	animation: bubble_3_7_9_13 .8s; /* при клике лейбл-копия отрабатывает такую же анимацию, как и основной лейбл */
+}
+
+@keyframes bubble_3_7_9_13 {
+	0% {
+		border-radius: 50%;
+	}
+	50% {
+		opacity: 1;
+		transform: scale(7.5);
+	}
+	100% {
+		opacity: 0;
+		transform: scale(7.5);
+		border-radius: 50%;
+	}
+}
+
+/* анимация для лейбла 8 */
+.magic_button .input_8:checked ~ .label_8 {
+	animation: bubble_8 .8s;
+}
+
+.magic_button .input_copy_8:checked ~ .label_copy_8 {
+	animation: bubble_8 .8s; /* при клике лейбл-копия отрабатывает такую же анимацию, как и основной лейбл */
+}
+
+@keyframes bubble_8 {
+	0% {
+		border-radius: 50%;
+	}
+	50% {
+		opacity: 1;
+		transform: scale(6.5);
+	}
+	100% {
+		opacity: 0;
+		transform: scale(6.5);
+		border-radius: 50%;
+	}
+}
+
+/* анимация для лейблов 2, 4, 12, 14 */
+.magic_button .input_2:checked ~ .label_2,
+.magic_button .input_4:checked ~ .label_4,
+.magic_button .input_12:checked ~ .label_12,
+.magic_button .input_14:checked ~ .label_14 {
+	animation: bubble_2_4_12_14 .9s;
+}
+
+.magic_button .input_copy_2:checked ~ .label_copy_2,
+.magic_button .input_copy_4:checked ~ .label_copy_4,
+.magic_button .input_copy_12:checked ~ .label_copy_12,
+.magic_button .input_copy_14:checked ~ .label_copy_14 {
+	animation: bubble_2_4_12_14 .9s; /* при клике лейбл-копия отрабатывает такую же анимацию, как и основной лейбл */
+}
+
+@keyframes bubble_2_4_12_14 {
+	0% {
+		border-radius: 50%;
+	}
+	50% {
+		opacity: 1;
+		transform: scale(8.8);
+	}
+	100% {
+		opacity: 0;
+		transform: scale(8.8);
+		border-radius: 50%;
+	}
+}

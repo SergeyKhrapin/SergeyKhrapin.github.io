@@ -1,0 +1,707 @@
+body {
+	overflow: hidden;
+	background: #0089FF;
+}
+
+p {
+	position: absolute;
+	left: calc(50% - 212px);
+	font-size: 20px;
+	font-style: italic;
+	color: #fff;
+	opacity: .8;
+	transition: .5s;
+}
+
+body:hover p {
+	opacity: 0;
+}
+
+div {
+	position: absolute;
+}
+
+.main_block {
+  position: relative;
+  top: 140px;
+  height: 100px;
+  border-bottom: 10px solid green;
+  background: #0089FF;
+}
+
+.main_block::before {
+	content: '';
+	position: absolute;
+	width: 0;
+	height: 20px;
+	border-radius: 50%;
+	background: lightblue;
+	top: -150px;
+	animation-name: portal;
+	animation-duration: 1s;
+	animation-iteration-count: 2;
+	animation-direction: alternate;
+}
+
+.main_block::after {
+	content: '';
+	position: absolute;
+	width: 0;
+	height: 20px;
+	border-radius: 50%;
+	background: lightblue;
+	left: 1250px;
+	bottom: -10px;
+	animation-name: portal;
+	animation-duration: 1s;
+	animation-delay: 17.5s;
+	animation-iteration-count: 2;
+	animation-direction: alternate;
+}
+
+@keyframes portal {
+	100% {
+		width: 100px;
+	}
+}
+
+.triangle1 {
+	width: 5px;
+	height: 0;
+	border-left: 15px solid transparent;
+	border-right: 40px solid transparent;
+	border-bottom: 60px solid brown;
+	top: 40px;
+	left: 50px;
+	animation-name: triangle1;
+	animation-duration: 3s;
+	animation-delay: 4.1s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes triangle1 {
+	0%, 35% {
+		border-left: none;
+		left: 70px;
+	}
+	34% {
+		width: 5px;
+	}
+	35% {
+		width: 0;
+	}
+	40% {
+		left: 90px;
+	}
+	69% {
+		border-right: 40px solid transparent;
+	}
+	70% {
+		border-right: none;
+	}
+	100% {
+		border-left: none;
+		width: 0;
+		border-right: none;
+		left: 90px;
+	}
+}
+
+.triangle1::after {
+	content: '';
+	position: absolute;
+	width: 95px;
+	height: 5px;
+	background: brown;
+	left: -40px;
+	animation-name: triangle1_after;
+	animation-duration: 8s;
+	animation-delay: 0.9s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes triangle1_after {
+	6% {
+		transform: rotateZ(45deg);
+	}
+	12%, 77%, 83%, 85% {
+		transform: rotateZ(0);
+	}
+	45.8% {
+		top: 0;
+	}
+	48%, 57% {
+		top: -5px;
+	}
+	59.5%, 68.5% {
+		top: -35px;
+	}
+	73.5%, 74% {
+		top: -55px;
+	}
+	81% {
+		transform: rotateZ(35deg);
+	}
+	82% {
+		transform: rotateZ(-20deg);
+	}
+	84% {
+		transform: rotateZ(10deg);
+	}
+	88% {
+		top: 55px;
+		opacity: 1;
+	}
+	97% {
+		top: 55px;
+		opacity: 0;
+	}
+	100% {
+		opacity: 0;
+	}
+
+}
+
+.tube {
+  left: 400px;
+  height: 100px;
+  width: 400px;
+  box-sizing: border-box;
+  border: 30px solid #404241;
+  border-right-width: 90px;
+  border-left-width: 90px;
+  border-radius: 0 70px 70px 0;
+  z-index: 3;
+}
+
+.tube_entry {
+  height: 100px;
+  width: 60px;
+  background: #202120;
+  border-radius: 50%;
+  left: 370px;
+  z-index: 4;
+}
+
+.triangle2 {
+	width: 0;
+	height: 0;
+	border-left: 100px solid transparent;
+	border-bottom: 100px solid brown;
+	left: 900px;
+}
+
+.ball {
+  width: 5px;
+  height: 5px;
+  border: 40px solid;
+  border-color: red blue yellow green;
+  border-radius: 50%;
+  left: 0;
+  top: -235px;
+  transform: none;
+  animation-name: ball;
+  animation-duration: 20s;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
+
+}
+
+@keyframes ball {
+	2%, 20.05%, 35%, 42.05%, 43%, 48%, 86.5% {
+		transform: rotateZ(0);
+	}
+    5%, 32.5%, 34%, 44.1% {
+		top: 15px;
+	}
+	7.3% {
+		z-index: 5;
+	}
+	7.35% {
+		z-index: 1;
+	}
+	20% {
+		top: 15px;
+  	    left: 560px;
+    	transform: rotateZ(3turn);
+  	}
+  	33.5% {
+  		top: 0;
+  	}
+  	42%, 47% {
+  		transform: rotateZ(8turn);
+  	}
+  	43% {
+  		left: 560px;
+  	}
+  	47%, 85% {
+  		top: -330px;
+  		left: 1100px;
+  	}
+  	86.5% {
+  		top: -95px;
+  		left: 1130px;	
+  	}
+  	88% {
+  		top: -120px;
+  		left: 1200px;
+  	}
+	91%, 100% {
+  		top: 140px;
+  		left: 1280px;
+  		transform: rotateZ(1turn);
+  	}
+}
+
+.packman {
+	width: 0;
+	height: 0;
+	border-radius: 50%;
+	border: 20px solid red;
+	border-right: 20px solid transparent;
+	top: 60px;
+	left: -45px;
+	z-index: 5;
+	animation-name: packman;
+	animation-duration: 20s;
+	animation-timing-function: linear;
+	animation-delay: 3s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes packman {
+	3%, 18% {
+		left: 13px;
+	}
+	5% {
+		border-right: 20px solid transparent;
+	}
+	6% {
+		border-right: 20px solid red;
+	}
+	7% {
+		top: 60px;
+		border: 20px solid red;
+		border-right: 20px solid transparent;
+	}
+	8% {
+		top: 40px;
+		border: 30px solid red;
+		border-right: 30px solid transparent;
+	}
+	10% {
+		top: 40px;
+		border: 30px solid red;
+		border-right: 30px solid transparent;
+	}
+	11% {
+		top: 40px;
+		border: 30px solid red;
+		border-right: 30px solid red;
+	}
+	12% {
+		top: 40px;
+		border: 30px solid red;
+		border-right: 30px solid transparent;
+	}
+	13% {
+		top: 10px;
+		border: 45px solid red;
+		border-right: 45px solid transparent;
+	}
+	15% {
+		top: 10px;
+		border: 45px solid red;
+		border-right: 45px solid transparent;
+	}
+	16% {
+		top: 10px;
+		border: 45px solid red;
+		border-right: 45px solid red;
+	}
+	17% {
+		top: 10px;
+		border: 45px solid red;
+		border-right: 45px solid transparent;
+	}
+	18% {
+		top: -10px;
+		border: 55px solid red;
+	}
+	19.5% {
+		top: -10px;
+		border: 55px solid red;
+	}
+	20% {
+		left: 305px;
+		top: 0;
+		border: 50px solid red;
+		border-right: 50px solid transparent;
+	}
+	22%, 23% {
+		left: 265px;
+		top: -10px;
+		border: 55px solid red;
+	}
+	24% {
+		left: 325px;
+		top: 0;
+		border: 50px solid red;
+		border-right: 50px solid transparent;
+	}
+	26%, 27% {
+		left: 245px;
+		top: -10px;
+		border: 55px solid red;
+	}
+	28% {
+		left: 345px;
+		top: 10px;
+		border: 45px solid red;
+		border-right: 45px solid transparent;
+	}
+	30%, 33% {
+		left: 250px;
+		top: -10px;
+		border: 55px solid red;
+	}
+	33.5% {
+		left: 320px;
+		top: -120px;;
+		border: 55px solid red;
+	}
+	34% {
+		left: 340px;
+		top: -120px;
+	}
+	34.5%, 36% {
+		top: -110px;
+	}
+	36.5%, 38%, 39%, 40%, 41% {
+		border-right: 55px solid red;
+	}
+	37%, 37.5% {
+		left: 340px;
+	}
+	18%, 19.5%, 22%, 23%, 26%, 27%, 30%, 33%, 33.5%, 34.5%, 36%, 37%, 37.5%, 38.5%, 39.5%, 40.5%, 41.5% {
+		border-right: 55px solid transparent;
+	}
+	42% {
+		left: 750px;
+		top: -110px;
+	}
+	44% {
+		left: 880px;
+		top: -63px;
+	}
+	45.5% {
+		left: 960px;
+		top: -150px;
+	}
+	46% {
+		left: 1005px;
+		top: -130px;
+	}
+	46.5% {
+		left: 1040px;
+		top: -105px;
+	}
+	47% {	
+		left: 1070px;
+		top: -75px;
+	}
+	47.5% {
+		left: 1095px;
+		top: -50px;
+	}
+	48%, 53% {	
+		left: 1120px;
+		top: -10px;
+		border: 55px solid red;
+		border-right: 55px solid transparent;
+	}
+	53.1%, 59% {	
+		left: 1120px;
+		top: -10px;
+		border: 55px solid red;
+		border-right: 55px solid red;
+		border-left: 55px solid transparent;
+		opacity: 1;
+	}
+	59.1%, 65% {
+		left: 1120px;
+		top: -10px;
+		border: 55px solid red;
+		border-right: 55px solid red;
+		border-left: 55px solid transparent;
+		opacity: 0;
+	}
+	100% {
+		left: 1120px;
+		opacity: 0;
+	}
+}
+
+.packman_face {
+	width: 110px;
+	height: 110px;
+	background: red;
+	border-radius: 50%;
+	color: #fff;
+	font-size: 20px;
+	text-align: center;
+	top: -10px;
+	left: 1120px;
+	opacity: 0;
+	animation-name: packman_face;
+	animation-duration: 5s;
+	animation-delay: 14.85s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes packman_face {
+	0%, 99%, 100% {
+		opacity: 1;
+	}
+	65% {
+		height: 110px;
+	}
+	66% {
+		top: -10px;
+	}
+	70%, 100% {
+		height: 40px;
+		top: 60px;
+	}
+}
+
+.packman_face::before,
+.packman_face::after {
+	content: '';
+	position: absolute;
+	width: 15px;
+	height: 20px;
+	background: #fff;
+	border-radius: 50%;
+	top: 30px;
+	left: 28px;
+}
+
+.packman_face::before {
+	animation-name: packman_face_before;
+	animation-duration: 4s;
+	animation-delay: 16.5s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes packman_face_before {
+	10%, 14%, 20% {
+		transform: rotateX(0);
+	}
+	11%, 17% {
+		transform: rotateX(90deg);
+	}
+	32%, 41.1%, 96% {
+		transform: rotateZ(0);
+	}
+	41% {
+		transform: rotateZ(2turn);
+	}
+	42% {
+		top: 30px;
+	}
+	48% {
+		top: 10px;
+	}
+	99%, 100% {
+		transform: rotateZ(45deg);
+	}
+	100% {
+		top: 10px;
+	}
+}
+
+.packman_face::after {
+	left: 56px;
+	animation-name: packman_face_after;
+	animation-duration: 4s;
+	animation-delay: 16.5s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes packman_face_after {
+	10%, 14%, 20% {
+		transform: rotateX(0);
+	}
+	11%, 17% {
+		transform: rotateX(90deg);
+	}
+	32%, 41.1%, 96% {
+		transform: rotateZ(0);
+	}
+	41% {
+		transform: rotateZ(-2turn);
+	}
+	42% {
+		top: 30px;
+	}
+	48% {
+		top: 10px;
+	}
+	99%, 100% {
+		transform: rotateZ(-45deg);
+	}
+	100% {
+		top: 10px;
+	}
+}
+
+.packman_face b {
+	opacity: 0;
+	animation-name: packman_face_b;
+	animation-duration: 1s;
+	animation-delay: 15.3s;
+}
+
+@keyframes packman_face_b {
+	50%, 99% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+.footer {
+	position: absolute;
+	top: 255px;
+	width: 100%;
+	height: 1500px;
+	background: #333;
+	background: linear-gradient(#94969E, #1F1F1E);
+	z-index: 10;
+	animation-name: footer1;
+	animation-duration: 3s;
+	animation-delay: 22s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes footer1 {
+	100% {
+		top: calc(100vh - 1500px);
+	}
+}
+
+.text_block {
+	position: relative;
+	top: 180px;
+	font-size: 140px;
+	color: #fff;
+	text-align: center;
+	overflow: hidden;
+}
+
+.text_block::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  border: 8.5px solid;
+  border-color: red blue yellow green;
+  border-radius: 50%;
+  margin-left: 600px;
+  top: 114px;
+  z-index: 11;
+  transform: none;
+  animation-name: packman_small;
+  animation-duration: 2.5s;
+  animation-delay: 26.5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes packman_small {
+	100% {
+		transform: rotateZ(-8turn);
+		margin-left: 10px;
+ 	    top: 114px;
+	}
+}
+
+.text_block span {
+  position: relative;
+  z-index: 10;
+}
+
+.text_block span:first-child {
+  left: -1000px;
+  animation-name: word_left;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+  animation-delay: 24s;
+}
+
+@keyframes word_left {
+  45%, 75%, 100% {
+    left: 0;
+  }
+  60% {
+    left: -40px;
+  }
+  90% {
+    left: -15px;
+  }
+}
+
+.text_block span:last-child {
+  left: 1000px;
+  animation-name: word_right;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+  animation-delay: 24s;
+}
+
+@keyframes word_right {
+  45%, 75%, 100% {
+    left: 0;
+  }
+  60% {
+    left: 40px;
+  }
+  90% {
+    left: 15px;
+  }
+}
+
+.main_block::before,
+.main_block::after,
+.ball,
+.triangle1,
+.triangle1::after,
+.packman,
+.packman_face,
+.packman_face::before,
+.packman_face::after,
+.packman_face b,
+.footer,
+.text_block::after,
+.text_block span {
+	animation-play-state: paused;
+}
+
+body:hover .main_block::before,
+body:hover .main_block::after,
+body:hover .ball,
+body:hover .triangle1,
+body:hover .triangle1::after,
+body:hover .packman,
+body:hover .packman_face,
+body:hover .packman_face::before,
+body:hover .packman_face::after,
+body:hover .packman_face b,
+body:hover .footer,
+body:hover .text_block::after,
+body:hover .text_block span {
+	animation-play-state: running;
+}

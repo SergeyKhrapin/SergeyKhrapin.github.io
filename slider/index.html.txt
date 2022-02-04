@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="UTF-8">
+	<title>Welcome to the magical world of CSS!</title>
+
+    <!-- realfavicongenerator.net -->
+	<link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png?v=PYEOadRBNE">
+	<link rel="icon" type="image/png" href="favicons/favicon-32x32.png?v=PYEOadRBNE" sizes="32x32">
+	<link rel="icon" type="image/png" href="favicons/favicon-16x16.png?v=PYEOadRBNE" sizes="16x16">
+	<link rel="manifest" href="favicons/manifest.json?v=PYEOadRBNE">
+	<link rel="mask-icon" href="favicons/safari-pinned-tab.svg?v=PYEOadRBNE" color="#5bbad5">
+	<link rel="shortcut icon" href="favicons/favicon.ico?v=PYEOadRBNE">
+	<meta name="msapplication-config" content="favicons/browserconfig.xml?v=PYEOadRBNE">
+	<meta name="theme-color" content="#ffffff">
+	<!-- realfavicongenerator.net -->
+
+	<link href="https://fonts.googleapis.com/css?family=Lobster|Orbitron" rel="stylesheet">
+	<link rel="stylesheet" href="style_slider.css">
+	<link rel="stylesheet" href="style_button.css">
+</head>
+
+<body>
+
+	<h1>Slider - only CSS / without <span>JS</span></h1>
+
+	<p>специально для Катюши)</p>
+
+	<h3>&</h3>
+
+	<h2>
+		<i class='char_M'>M</i>
+		<i class='char_a'>a</i>
+		<i class='char_g'>g</i>
+		<i class='char_i'>i</i>
+		<i class='char_c'>c</i>
+
+		<i class='char_B'>B</i>
+		<i class='char_u'>u</i>
+		<i class='char_t1'>t</i>
+		<i class='char_t2'>t</i>
+		<i class='char_o'>o</i>
+		<i class='char_n'>n</i>
+		!
+	</h2>
+
+	<input type="radio" name='radio_slider' id='radio_3'> <!-- третий инпут -->
+
+	<div class="slider">
+
+		<input type="radio" name='radio_slider' id='radio_1' checked>
+		<input type="radio" name='radio_slider' id='radio_2'>
+		<!-- Третий инпут вынесен за пределы блока .slider, чтобы при его чеканьи появлялась волшебная кнопка (иначе невозможно обратиться через селектор). Для этой цели выбран именно ТРЕТИЙ инпут, потому что его легко отцентрировать относительно окна браузера -->
+		<input type="radio" name='radio_slider' id='radio_4'>
+		<input type="radio" name='radio_slider' id='radio_5'>
+
+		<label class='label label_5' for="radio_5"></label>
+		<label class='label label_4' for="radio_4"></label>
+		<label class='label label_3' for="radio_3"></label>
+		<label class='label label_2' for="radio_2"></label>
+		<label class='label label_1' for="radio_1"></label>
+			
+		<div class="circle circle_1"></div>
+		<div class="circle circle_2"></div>
+		<div class="circle circle_3"></div>
+		<div class="circle circle_4"></div>
+		<div class="circle circle_5"></div>
+
+		<div class="block_set">
+			<img src="img/slide5.jpg" alt="">
+			<img src="img/slide2.jpg" alt="">
+			<img src="img/slide3.jpg" alt="">
+			<img src="img/slide4.jpg" alt="">
+			<img src="img/slide1.jpg" alt="">
+		</div>
+
+	</div>
+
+	<!-- ВОЛШЕБНАЯ КНОПКА -->
+	<div class='magic_button'>
+		<span>click me</span>
+
+		<input type="radio" class='input_1' id='input_1' name='name'>
+		<input type="radio" class='input_copy_1' id='input_copy_1' name='name'>
+		<label for="input_1" class='label_1'></label> <!-- основной лейбл -->
+		<label for="input_copy_1" class='label_copy label_copy_1'></label> <!-- лейбл-копия - для того, чтобы можно было кликать по одному и тому же месту много раз ПОДРЯД -->
+		
+		<input type="radio" class='input_2' id='input_2' name='name'>
+		<input type="radio" class='input_copy_2' id='input_copy_2' name='name'>
+		<label for="input_2" class='label_2'></label>
+		<label for="input_copy_2" class='label_copy label_copy_2'></label>
+
+		<input type="radio" class='input_3' id='input_3' name='name'>
+		<input type="radio" class='input_copy_3' id='input_copy_3' name='name'>
+		<label for="input_3" class='label_3'></label>
+		<label for="input_copy_3" class='label_copy label_copy_3'></label>
+
+		<input type="radio" class='input_4' id='input_4' name='name'>
+		<input type="radio" class='input_copy_4' id='input_copy_4' name='name'>
+		<label for="input_4" class='label_4'></label>
+		<label for="input_copy_4" class='label_copy label_copy_4'></label>
+
+		<input type="radio" class='input_5' id='input_5' name='name'>
+		<input type="radio" class='input_copy_5' id='input_copy_5' name='name'>
+		<label for="input_5" class='label_5'></label>
+		<label for="input_copy_5" class='label_copy label_copy_5'></label>
+
+		<input type="radio" class='input_6' id='input_6' name='name'>
+		<input type="radio" class='input_copy_6' id='input_copy_6' name='name'>
+		<label for="input_6" class='label_6'></label>
+		<label for="input_copy_6" class='label_copy label_copy_6'></label>
+
+		<input type="radio" class='input_7' id='input_7' name='name'>
+		<input type="radio" class='input_copy_7' id='input_copy_7' name='name'>
+		<label for="input_7" class='label_7'></label>
+		<label for="input_copy_7" class='label_copy label_copy_7'></label>
+
+		<input type="radio" class='input_8' id='input_8' name='name'>
+		<input type="radio" class='input_copy_8' id='input_copy_8' name='name'>
+		<label for="input_8" class='label_8'></label>
+		<label for="input_copy_8" class='label_copy label_copy_8'></label>
+
+		<input type="radio" class='input_9' id='input_9' name='name'>
+		<input type="radio" class='input_copy_9' id='input_copy_9' name='name'>
+		<label for="input_9" class='label_9'></label>
+		<label for="input_copy_9" class='label_copy label_copy_9'></label>
+
+		<input type="radio" class='input_10' id='input_10' name='name'>
+		<input type="radio" class='input_copy_10' id='input_copy_10' name='name'>
+		<label for="input_10" class='label_10'></label>
+		<label for="input_copy_10" class='label_copy label_copy_10'></label>
+
+		<input type="radio" class='input_11' id='input_11' name='name'>
+		<input type="radio" class='input_copy_11' id='input_copy_11' name='name'>
+		<label for="input_11" class='label_11'></label>
+		<label for="input_copy_11" class='label_copy label_copy_11'></label>
+
+		<input type="radio" class='input_12' id='input_12' name='name'>
+		<input type="radio" class='input_copy_12' id='input_copy_12' name='name'>
+		<label for="input_12" class='label_12'></label>
+		<label for="input_copy_12" class='label_copy label_copy_12'></label>
+
+		<input type="radio" class='input_13' id='input_13' name='name'>
+		<input type="radio" class='input_copy_13' id='input_copy_13' name='name'>
+		<label for="input_13" class='label_13'></label>
+		<label for="input_copy_13" class='label_copy label_copy_13'></label>
+
+		<input type="radio" class='input_14' id='input_14' name='name'>
+		<input type="radio" class='input_copy_14' id='input_copy_14' name='name'>
+		<label for="input_14" class='label_14'></label>
+		<label for="input_copy_14" class='label_copy label_copy_14'></label>
+
+		<input type="radio" class='input_15' id='input_15' name='name'>
+		<input type="radio" class='input_copy_15' id='input_copy_15' name='name'>
+		<label for="input_15" class='label_15'></label>
+		<label for="input_copy_15" class='label_copy label_copy_15'></label>
+	</div>
+
+</body>
+
+</html>
